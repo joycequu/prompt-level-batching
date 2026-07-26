@@ -1,0 +1,570 @@
+{
+  "settings": {
+    "model": "openai/gpt-5.4-nano",
+    "direct_provider": false,
+    "use_vertex": false,
+    "include_thoughts": true,
+    "disable_cache": true,
+    "reasoning_effort": "none",
+    "plain_json": false,
+    "streaming": true,
+    "prompt_order": "operator_first",
+    "doc_format": "bullet",
+    "data_file": "irony_random_100.csv",
+    "num_tweets": 100,
+    "batch_sizes": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      25,
+      50,
+      100
+    ]
+  },
+  "results": [
+  {
+    "batch_size": 1,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 17,
+    "irony_rate": 0.17,
+    "irony_tweet_ids": [
+      "2620",
+      "2234",
+      "1729",
+      "384",
+      "2070",
+      "1840",
+      "397",
+      "1084",
+      "512",
+      "414",
+      "1858",
+      "2604",
+      "2800",
+      "2655",
+      "1894",
+      "2622",
+      "132"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.65,
+      "total_tweets": 100,
+      "correct": 65,
+      "true_positives": 17,
+      "false_positives": 0,
+      "true_negatives": 48,
+      "false_negatives": 35
+    },
+    "total_latency_secs": 110.00074863433838,
+    "total_llm_calls": 100,
+    "input_token_details": {
+      "input_text_tokens": 29576,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 29576
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 2560,
+      "total_completion_tokens": 2560
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.005915199999999999,
+      "total_completion_cost": 0.0031999999999999993,
+      "total_cost": 0.009115199999999995
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:83484b260c0a4e88be639fbcaa50cc59] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 1 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":true}]}"
+    }
+  },
+  {
+    "batch_size": 2,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 20,
+    "irony_rate": 0.2,
+    "irony_tweet_ids": [
+      "457",
+      "915",
+      "420",
+      "2234",
+      "384",
+      "2070",
+      "1719",
+      "1840",
+      "882",
+      "397",
+      "1084",
+      "512",
+      "414",
+      "1858",
+      "667",
+      "2800",
+      "293",
+      "1894",
+      "2622",
+      "132"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.62,
+      "total_tweets": 100,
+      "correct": 62,
+      "true_positives": 17,
+      "false_positives": 3,
+      "true_negatives": 45,
+      "false_negatives": 35
+    },
+    "total_latency_secs": 56.777968645095825,
+    "total_llm_calls": 50,
+    "input_token_details": {
+      "input_text_tokens": 16574,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 16574
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1860,
+      "total_completion_tokens": 1860
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0033147999999999997,
+      "total_completion_cost": 0.0023249999999999994,
+      "total_cost": 0.0056397999999999995
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:1bc94412a887468183518999c12cbbd6] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 2 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":false},{\"tweetId\":\"457\",\"is_irony\":true}]}"
+    }
+  },
+  {
+    "batch_size": 5,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 22,
+    "irony_rate": 0.22,
+    "irony_tweet_ids": [
+      "2620",
+      "1004",
+      "2772",
+      "2234",
+      "2070",
+      "1719",
+      "2414",
+      "27",
+      "1732",
+      "882",
+      "397",
+      "1084",
+      "323",
+      "414",
+      "1858",
+      "2604",
+      "2800",
+      "2655",
+      "293",
+      "1894",
+      "2622",
+      "900"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.6,
+      "total_tweets": 100,
+      "correct": 60,
+      "true_positives": 17,
+      "false_positives": 5,
+      "true_negatives": 43,
+      "false_negatives": 35
+    },
+    "total_latency_secs": 22.380425930023193,
+    "total_llm_calls": 20,
+    "input_token_details": {
+      "input_text_tokens": 8705,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 8705
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1440,
+      "total_completion_tokens": 1440
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.001741,
+      "total_completion_cost": 0.0018,
+      "total_cost": 0.0035409999999999994
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:bd3fd3d9808a453288c216827228bc84] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 5 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":true},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":true}]}"
+    }
+  },
+  {
+    "batch_size": 10,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 17,
+    "irony_rate": 0.17,
+    "irony_tweet_ids": [
+      "2772",
+      "2234",
+      "2419",
+      "384",
+      "882",
+      "397",
+      "1084",
+      "323",
+      "414",
+      "2746",
+      "2800",
+      "2655",
+      "293",
+      "1894",
+      "2622",
+      "132",
+      "1293"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.57,
+      "total_tweets": 100,
+      "correct": 57,
+      "true_positives": 13,
+      "false_positives": 4,
+      "true_negatives": 44,
+      "false_negatives": 39
+    },
+    "total_latency_secs": 15.445696592330933,
+    "total_llm_calls": 10,
+    "input_token_details": {
+      "input_text_tokens": 6108,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 6108
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1300,
+      "total_completion_tokens": 1300
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0012216,
+      "total_completion_cost": 0.0016250000000000001,
+      "total_cost": 0.0028465999999999995
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:e32270052b7f4b049249e50208d3eff1] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 10 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \nTweet 6:\n- tweetId: 915\n- text: when you get friendzoned by someone you trying to friendzone...sigh \nTweet 7:\n- tweetId: 572\n- text: #CDC:  #Enough #Patients #Getting #Flu #Shots #This #Year: (HealthDay News) \u2013 Fewer than half of Americans have... \nTweet 8:\n- tweetId: 420\n- text: @user You're on my \"People Who Antagonize Me\" list. via @user  \nTweet 9:\n- tweetId: 2772\n- text: What's the correct word for racism (towards white people)?|There is none.|#racism|#is||#good|#4anyone \nTweet 10:\n- tweetId: 2234\n- text: Fav part abt Xmas day..getting merry Xmas tweets from ppl who NEVER talk to me #kys #idontcare  \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":false},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":false},{\"tweetId\":\"915\",\"is_irony\":false},{\"tweetId\":\"572\",\"is_irony\":false},{\"tweetId\":\"420\",\"is_irony\":false},{\"tweetId\":\"2772\",\"is_irony\":true},{\"tweetId\":\"2234\",\"is_irony\":true}]}"
+    }
+  },
+  {
+    "batch_size": 20,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 21,
+    "irony_rate": 0.21,
+    "irony_tweet_ids": [
+      "2620",
+      "2234",
+      "2419",
+      "384",
+      "2070",
+      "2414",
+      "397",
+      "1084",
+      "512",
+      "285",
+      "414",
+      "1858",
+      "2604",
+      "667",
+      "2746",
+      "2800",
+      "2655",
+      "293",
+      "1894",
+      "2622",
+      "1293"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.63,
+      "total_tweets": 100,
+      "correct": 63,
+      "true_positives": 18,
+      "false_positives": 3,
+      "true_negatives": 45,
+      "false_negatives": 34
+    },
+    "total_latency_secs": 12.419996500015259,
+    "total_llm_calls": 5,
+    "input_token_details": {
+      "input_text_tokens": 4800,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 4800
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1230,
+      "total_completion_tokens": 1230
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0009599999999999999,
+      "total_completion_cost": 0.0015374999999999998,
+      "total_cost": 0.0024974999999999997
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:ab1ad0f492554cb384518e1e8008f00e] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 20 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \nTweet 6:\n- tweetId: 915\n- text: when you get friendzoned by someone you trying to friendzone...sigh \nTweet 7:\n- tweetId: 572\n- text: #CDC:  #Enough #Patients #Getting #Flu #Shots #This #Year: (HealthDay News) \u2013 Fewer than half of Americans have... \nTweet 8:\n- tweetId: 420\n- text: @user You're on my \"People Who Antagonize Me\" list. via @user  \nTweet 9:\n- tweetId: 2772\n- text: What's the correct word for racism (towards white people)?|There is none.|#racism|#is||#good|#4anyone \nTweet 10:\n- tweetId: 2234\n- text: Fav part abt Xmas day..getting merry Xmas tweets from ppl who NEVER talk to me #kys #idontcare  \nTweet 11:\n- tweetId: 357\n- text: A deal was negotiated between @user & GTAA. That deal was is hidden & built into the pricing of #UPX tix. Why all the secrecy? #TOpoli \nTweet 12:\n- tweetId: 2419\n- text: Is \"I have to go...my gelding is struggling with dystocia\" a valid excuse...I just want to see the (lack of) reaction #whenyouseeit  \nTweet 13:\n- tweetId: 1729\n- text: What an eventful day...  \u270c\ufe0f \nTweet 14:\n- tweetId: 131\n- text: Hiding in plain sight. By #MichaelBeerens (http://t.co/EJaFcMsIrA) #graffiti #streetart  \nTweet 15:\n- tweetId: 123\n- text: Remember that one episode Santana wanted to be a dancer but then forgot about it altogether. Good times. Good times. #Glee  \nTweet 16:\n- tweetId: 384\n- text: What a B.E.A.utiful day in Scotland!! :) #rain #gales  lol \nTweet 17:\n- tweetId: 896\n- text: #chattyman never fails to make me laugh @user #1 talk show on TV! #loveit \nTweet 18:\n- tweetId: 953\n- text: I'm not usually a fan of anything #pumpkin or #pumpkinspiced but OMG. These are the best cookies I've... \nTweet 19:\n- tweetId: 2070\n- text: I'm so glad that Jonathan Stewart had to have, his best game in 5 yrs against me in fantasy fb playoffs.....  #imout \nTweet 20:\n- tweetId: 2466\n- text: Let's go CAVS!!! #cleveland #cavs #cavaliers #nba @ Quicken Loans Arena \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":true},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":false},{\"tweetId\":\"915\",\"is_irony\":false},{\"tweetId\":\"572\",\"is_irony\":false},{\"tweetId\":\"420\",\"is_irony\":false},{\"tweetId\":\"2772\",\"is_irony\":false},{\"tweetId\":\"2234\",\"is_irony\":true},{\"tweetId\":\"357\",\"is_irony\":false},{\"tweetId\":\"2419\",\"is_irony\":true},{\"tweetId\":\"1729\",\"is_irony\":false},{\"tweetId\":\"131\",\"is_irony\":false},{\"tweetId\":\"123\",\"is_irony\":false},{\"tweetId\":\"384\",\"is_irony\":true},{\"tweetId\":\"896\",\"is_irony\":false},{\"tweetId\":\"953\",\"is_irony\":false},{\"tweetId\":\"2070\",\"is_irony\":true},{\"tweetId\":\"2466\",\"is_irony\":false}]}"
+    }
+  },
+  {
+    "batch_size": 25,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 14,
+    "irony_rate": 0.14,
+    "irony_tweet_ids": [
+      "2234",
+      "2070",
+      "27",
+      "1732",
+      "882",
+      "397",
+      "1084",
+      "512",
+      "414",
+      "1858",
+      "2604",
+      "2746",
+      "293",
+      "132"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.56,
+      "total_tweets": 100,
+      "correct": 56,
+      "true_positives": 11,
+      "false_positives": 3,
+      "true_negatives": 45,
+      "false_negatives": 41
+    },
+    "total_latency_secs": 10.7396981716156,
+    "total_llm_calls": 4,
+    "input_token_details": {
+      "input_text_tokens": 4539,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 4539
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1216,
+      "total_completion_tokens": 1216
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0009078000000000001,
+      "total_completion_cost": 0.00152,
+      "total_cost": 0.0024278
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:67ade5c610f94c14a8deed10ac4e8c43] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 25 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \nTweet 6:\n- tweetId: 915\n- text: when you get friendzoned by someone you trying to friendzone...sigh \nTweet 7:\n- tweetId: 572\n- text: #CDC:  #Enough #Patients #Getting #Flu #Shots #This #Year: (HealthDay News) \u2013 Fewer than half of Americans have... \nTweet 8:\n- tweetId: 420\n- text: @user You're on my \"People Who Antagonize Me\" list. via @user  \nTweet 9:\n- tweetId: 2772\n- text: What's the correct word for racism (towards white people)?|There is none.|#racism|#is||#good|#4anyone \nTweet 10:\n- tweetId: 2234\n- text: Fav part abt Xmas day..getting merry Xmas tweets from ppl who NEVER talk to me #kys #idontcare  \nTweet 11:\n- tweetId: 357\n- text: A deal was negotiated between @user & GTAA. That deal was is hidden & built into the pricing of #UPX tix. Why all the secrecy? #TOpoli \nTweet 12:\n- tweetId: 2419\n- text: Is \"I have to go...my gelding is struggling with dystocia\" a valid excuse...I just want to see the (lack of) reaction #whenyouseeit  \nTweet 13:\n- tweetId: 1729\n- text: What an eventful day...  \u270c\ufe0f \nTweet 14:\n- tweetId: 131\n- text: Hiding in plain sight. By #MichaelBeerens (http://t.co/EJaFcMsIrA) #graffiti #streetart  \nTweet 15:\n- tweetId: 123\n- text: Remember that one episode Santana wanted to be a dancer but then forgot about it altogether. Good times. Good times. #Glee  \nTweet 16:\n- tweetId: 384\n- text: What a B.E.A.utiful day in Scotland!! :) #rain #gales  lol \nTweet 17:\n- tweetId: 896\n- text: #chattyman never fails to make me laugh @user #1 talk show on TV! #loveit \nTweet 18:\n- tweetId: 953\n- text: I'm not usually a fan of anything #pumpkin or #pumpkinspiced but OMG. These are the best cookies I've... \nTweet 19:\n- tweetId: 2070\n- text: I'm so glad that Jonathan Stewart had to have, his best game in 5 yrs against me in fantasy fb playoffs.....  #imout \nTweet 20:\n- tweetId: 2466\n- text: Let's go CAVS!!! #cleveland #cavs #cavaliers #nba @ Quicken Loans Arena \nTweet 21:\n- tweetId: 109\n- text: On my lunch break so sleepy\ud83d\ude34 \nTweet 22:\n- tweetId: 2299\n- text: I'm so good at sight singing.  \nTweet 23:\n- tweetId: 815\n- text: @user #me and #change were not friends I still need #time \nTweet 24:\n- tweetId: 2662\n- text: Yay for knee machines!  \nTweet 25:\n- tweetId: 2233\n- text: Wondering weather to have a few drinks tonight or not \ud83c\udf85\ud83c\udf81\ud83c\udf81\ud83c\udf84 \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":false},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":false},{\"tweetId\":\"915\",\"is_irony\":false},{\"tweetId\":\"572\",\"is_irony\":false},{\"tweetId\":\"420\",\"is_irony\":false},{\"tweetId\":\"2772\",\"is_irony\":false},{\"tweetId\":\"2234\",\"is_irony\":true},{\"tweetId\":\"357\",\"is_irony\":false},{\"tweetId\":\"2419\",\"is_irony\":false},{\"tweetId\":\"1729\",\"is_irony\":false},{\"tweetId\":\"131\",\"is_irony\":false},{\"tweetId\":\"123\",\"is_irony\":false},{\"tweetId\":\"384\",\"is_irony\":false},{\"tweetId\":\"896\",\"is_irony\":false},{\"tweetId\":\"953\",\"is_irony\":false},{\"tweetId\":\"2070\",\"is_irony\":true},{\"tweetId\":\"2466\",\"is_irony\":false},{\"tweetId\":\"109\",\"is_irony\":false},{\"tweetId\":\"2299\",\"is_irony\":false},{\"tweetId\":\"815\",\"is_irony\":false},{\"tweetId\":\"2662\",\"is_irony\":false},{\"tweetId\":\"2233\",\"is_irony\":false}]}"
+    }
+  },
+  {
+    "batch_size": 50,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 15,
+    "irony_rate": 0.15,
+    "irony_tweet_ids": [
+      "2620",
+      "915",
+      "2772",
+      "2234",
+      "2070",
+      "27",
+      "1732",
+      "882",
+      "397",
+      "1084",
+      "1882",
+      "512",
+      "1894",
+      "132",
+      "1293"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.57,
+      "total_tweets": 100,
+      "correct": 57,
+      "true_positives": 12,
+      "false_positives": 3,
+      "true_negatives": 45,
+      "false_negatives": 40
+    },
+    "total_latency_secs": 8.65832805633545,
+    "total_llm_calls": 2,
+    "input_token_details": {
+      "input_text_tokens": 4016,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 4016
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1188,
+      "total_completion_tokens": 1188
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0008032,
+      "total_completion_cost": 0.001485,
+      "total_cost": 0.0022881999999999998
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:69ac5c54979445a188d7bfdd6137e2df] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 50 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \nTweet 6:\n- tweetId: 915\n- text: when you get friendzoned by someone you trying to friendzone...sigh \nTweet 7:\n- tweetId: 572\n- text: #CDC:  #Enough #Patients #Getting #Flu #Shots #This #Year: (HealthDay News) \u2013 Fewer than half of Americans have... \nTweet 8:\n- tweetId: 420\n- text: @user You're on my \"People Who Antagonize Me\" list. via @user  \nTweet 9:\n- tweetId: 2772\n- text: What's the correct word for racism (towards white people)?|There is none.|#racism|#is||#good|#4anyone \nTweet 10:\n- tweetId: 2234\n- text: Fav part abt Xmas day..getting merry Xmas tweets from ppl who NEVER talk to me #kys #idontcare  \nTweet 11:\n- tweetId: 357\n- text: A deal was negotiated between @user & GTAA. That deal was is hidden & built into the pricing of #UPX tix. Why all the secrecy? #TOpoli \nTweet 12:\n- tweetId: 2419\n- text: Is \"I have to go...my gelding is struggling with dystocia\" a valid excuse...I just want to see the (lack of) reaction #whenyouseeit  \nTweet 13:\n- tweetId: 1729\n- text: What an eventful day...  \u270c\ufe0f \nTweet 14:\n- tweetId: 131\n- text: Hiding in plain sight. By #MichaelBeerens (http://t.co/EJaFcMsIrA) #graffiti #streetart  \nTweet 15:\n- tweetId: 123\n- text: Remember that one episode Santana wanted to be a dancer but then forgot about it altogether. Good times. Good times. #Glee  \nTweet 16:\n- tweetId: 384\n- text: What a B.E.A.utiful day in Scotland!! :) #rain #gales  lol \nTweet 17:\n- tweetId: 896\n- text: #chattyman never fails to make me laugh @user #1 talk show on TV! #loveit \nTweet 18:\n- tweetId: 953\n- text: I'm not usually a fan of anything #pumpkin or #pumpkinspiced but OMG. These are the best cookies I've... \nTweet 19:\n- tweetId: 2070\n- text: I'm so glad that Jonathan Stewart had to have, his best game in 5 yrs against me in fantasy fb playoffs.....  #imout \nTweet 20:\n- tweetId: 2466\n- text: Let's go CAVS!!! #cleveland #cavs #cavaliers #nba @ Quicken Loans Arena \nTweet 21:\n- tweetId: 109\n- text: On my lunch break so sleepy\ud83d\ude34 \nTweet 22:\n- tweetId: 2299\n- text: I'm so good at sight singing.  \nTweet 23:\n- tweetId: 815\n- text: @user #me and #change were not friends I still need #time \nTweet 24:\n- tweetId: 2662\n- text: Yay for knee machines!  \nTweet 25:\n- tweetId: 2233\n- text: Wondering weather to have a few drinks tonight or not \ud83c\udf85\ud83c\udf81\ud83c\udf81\ud83c\udf84 \nTweet 26:\n- tweetId: 1719\n- text: Yea, yea that's logical.  \nTweet 27:\n- tweetId: 903\n- text: Sorry this doesn't make any sense why make it even more tough? That's going to produce more players..  \nTweet 28:\n- tweetId: 1840\n- text: Too bad her cube doesn't have a door. - @user ||#bestcoworkersever  @user \nTweet 29:\n- tweetId: 2414\n- text: The ultimate \"How to\" book..... \nTweet 30:\n- tweetId: 1140\n- text: @user Substitute For Chicken Nuggets uhm no thanks \nTweet 31:\n- tweetId: 27\n- text: @user @user @user no duh. ? Is will owners fire Goodell for it? My guess he gets a raise  #GoodellMustGo \nTweet 32:\n- tweetId: 654\n- text: #TeenAnalCasting #2003 2003 Ford F-150 XLT Mulberry FL 33860 \nTweet 33:\n- tweetId: 2860\n- text: @user no but i followed you and i saw you posted that so i thot i might add on.....sorry \nTweet 34:\n- tweetId: 1732\n- text: They seemed to have found an alternative use for the bible #Hotel #NewYears  #Religious \nTweet 35:\n- tweetId: 1394\n- text: @user The fact that Whites are prone to universal thinking is actually racial in and of itself.  \nTweet 36:\n- tweetId: 1139\n- text: Can hear the trainees watching a training DVD while I'm on my break. Sounds fun :p  \nTweet 37:\n- tweetId: 637\n- text: @user @user @user You're arguments are obviously very impacted by the fact this family were TSI in appearance. \nTweet 38:\n- tweetId: 882\n- text: Well. If it's not one thing it's another. But hey why not a like new exhaust. #pissed  #GRRRR \nTweet 39:\n- tweetId: 1379\n- text: Why couldn't I just stay sleeping \nTweet 40:\n- tweetId: 419\n- text: @user has passed @user as the world's most valuable #startup! #growth #nyc \nTweet 41:\n- tweetId: 380\n- text: @user If it's a \"Blue Ribbon Panel\", then it will be all good.  \nTweet 42:\n- tweetId: 1557\n- text: @user my favourite day of the year !!!!  \nTweet 43:\n- tweetId: 397\n- text: A \u00a3718 phone bill is a lovely email to wake up to  \nTweet 44:\n- tweetId: 1471\n- text: Some guy chattin shit to me on the bus saying I look like snoop dogg #KMT #again \nTweet 45:\n- tweetId: 1409\n- text: Maaaaan stupid instagram I went from having 300+ followers, to my cat my mom and tom from MySpace -_-..... #smh  #butstill !!! \nTweet 46:\n- tweetId: 2473\n- text: it  just had to snow and cancel our Vball tournament today...\ud83d\udd2b\ud83d\ude21\ud83d\ude21\ud83d\ude21\ud83d\ude21 #ball #is  #life \nTweet 47:\n- tweetId: 1084\n- text: Woke up to find out my vehicle insurance went up $22 a month!! Merry Christmas to me...  \ud83d\ude12 \nTweet 48:\n- tweetId: 178\n- text: @user I think I'm gonna check your music out later. Thanks\u263a \nTweet 49:\n- tweetId: 1882\n- text: @user @user But it's not a time capsule! It' current in time \nTweet 50:\n- tweetId: 2197\n- text: 2AM on Christmas Day, and we're heating up Pizza and Breadsticks. #theboysarebackintown \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":true},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":false},{\"tweetId\":\"915\",\"is_irony\":true},{\"tweetId\":\"572\",\"is_irony\":false},{\"tweetId\":\"420\",\"is_irony\":false},{\"tweetId\":\"2772\",\"is_irony\":true},{\"tweetId\":\"2234\",\"is_irony\":true},{\"tweetId\":\"357\",\"is_irony\":false},{\"tweetId\":\"2419\",\"is_irony\":false},{\"tweetId\":\"1729\",\"is_irony\":false},{\"tweetId\":\"131\",\"is_irony\":false},{\"tweetId\":\"123\",\"is_irony\":false},{\"tweetId\":\"384\",\"is_irony\":false},{\"tweetId\":\"896\",\"is_irony\":false},{\"tweetId\":\"953\",\"is_irony\":false},{\"tweetId\":\"2070\",\"is_irony\":true},{\"tweetId\":\"2466\",\"is_irony\":false},{\"tweetId\":\"109\",\"is_irony\":false},{\"tweetId\":\"2299\",\"is_irony\":false},{\"tweetId\":\"815\",\"is_irony\":false},{\"tweetId\":\"2662\",\"is_irony\":false},{\"tweetId\":\"2233\",\"is_irony\":false},{\"tweetId\":\"1719\",\"is_irony\":false},{\"tweetId\":\"903\",\"is_irony\":false},{\"tweetId\":\"1840\",\"is_irony\":false},{\"tweetId\":\"2414\",\"is_irony\":false},{\"tweetId\":\"1140\",\"is_irony\":false},{\"tweetId\":\"27\",\"is_irony\":true},{\"tweetId\":\"654\",\"is_irony\":false},{\"tweetId\":\"2860\",\"is_irony\":false},{\"tweetId\":\"1732\",\"is_irony\":true},{\"tweetId\":\"1394\",\"is_irony\":false},{\"tweetId\":\"1139\",\"is_irony\":false},{\"tweetId\":\"637\",\"is_irony\":false},{\"tweetId\":\"882\",\"is_irony\":true},{\"tweetId\":\"1379\",\"is_irony\":false},{\"tweetId\":\"419\",\"is_irony\":false},{\"tweetId\":\"380\",\"is_irony\":false},{\"tweetId\":\"1557\",\"is_irony\":false},{\"tweetId\":\"397\",\"is_irony\":true},{\"tweetId\":\"1471\",\"is_irony\":false},{\"tweetId\":\"1409\",\"is_irony\":false},{\"tweetId\":\"2473\",\"is_irony\":false},{\"tweetId\":\"1084\",\"is_irony\":true},{\"tweetId\":\"178\",\"is_irony\":false},{\"tweetId\":\"1882\",\"is_irony\":true},{\"tweetId\":\"2197\",\"is_irony\":false}]}"
+    }
+  },
+  {
+    "batch_size": 100,
+    "model_name": "openai/gpt-5.4-nano",
+    "num_irony": 8,
+    "irony_rate": 0.08,
+    "irony_tweet_ids": [
+      "2620",
+      "2772",
+      "2234",
+      "384",
+      "1732",
+      "397",
+      "1084",
+      "132"
+    ],
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.52,
+      "total_tweets": 100,
+      "correct": 52,
+      "true_positives": 6,
+      "false_positives": 2,
+      "true_negatives": 46,
+      "false_negatives": 46
+    },
+    "total_latency_secs": 7.661333799362183,
+    "total_llm_calls": 1,
+    "input_token_details": {
+      "input_text_tokens": 3754,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 3754
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1174,
+      "total_completion_tokens": 1174
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.0007508,
+      "total_completion_cost": 0.0014675,
+      "total_cost": 0.0022183
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:a626db8d99f840128d8cdbe19936d586] You are a helpful assistant whose job is to detect irony in tweets.\nYou will be presented with multiple tweets and need to determine if each tweet uses irony.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nFor each tweet, evaluate:\n- Does the tweet use irony (saying the opposite of what is meant, or using sarcasm)?\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"is_irony\": true or false}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Evaluate the following 100 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: @user Wow, that is just so funny...  \nTweet 2:\n- tweetId: 457\n- text: Dog for dinner anyone? #Cultivo #Letchworth not bringing my kid here again \nTweet 3:\n- tweetId: 103\n- text: #Germany -- #ECB's #Weidmann #says #German #2015 #growth #may #be #better #than #expected. via @user \nTweet 4:\n- tweetId: 1127\n- text: so @user still waiting, my son is very happy enjoing his christmas gift ... i cant understand how u didn't prevent this ... \nTweet 5:\n- tweetId: 1004\n- text: Looking forward to a nice and long 130km #cycle tomorrow, in the minus degree weather  #fool #festive500 \nTweet 6:\n- tweetId: 915\n- text: when you get friendzoned by someone you trying to friendzone...sigh \nTweet 7:\n- tweetId: 572\n- text: #CDC:  #Enough #Patients #Getting #Flu #Shots #This #Year: (HealthDay News) \u2013 Fewer than half of Americans have... \nTweet 8:\n- tweetId: 420\n- text: @user You're on my \"People Who Antagonize Me\" list. via @user  \nTweet 9:\n- tweetId: 2772\n- text: What's the correct word for racism (towards white people)?|There is none.|#racism|#is||#good|#4anyone \nTweet 10:\n- tweetId: 2234\n- text: Fav part abt Xmas day..getting merry Xmas tweets from ppl who NEVER talk to me #kys #idontcare  \nTweet 11:\n- tweetId: 357\n- text: A deal was negotiated between @user & GTAA. That deal was is hidden & built into the pricing of #UPX tix. Why all the secrecy? #TOpoli \nTweet 12:\n- tweetId: 2419\n- text: Is \"I have to go...my gelding is struggling with dystocia\" a valid excuse...I just want to see the (lack of) reaction #whenyouseeit  \nTweet 13:\n- tweetId: 1729\n- text: What an eventful day...  \u270c\ufe0f \nTweet 14:\n- tweetId: 131\n- text: Hiding in plain sight. By #MichaelBeerens (http://t.co/EJaFcMsIrA) #graffiti #streetart  \nTweet 15:\n- tweetId: 123\n- text: Remember that one episode Santana wanted to be a dancer but then forgot about it altogether. Good times. Good times. #Glee  \nTweet 16:\n- tweetId: 384\n- text: What a B.E.A.utiful day in Scotland!! :) #rain #gales  lol \nTweet 17:\n- tweetId: 896\n- text: #chattyman never fails to make me laugh @user #1 talk show on TV! #loveit \nTweet 18:\n- tweetId: 953\n- text: I'm not usually a fan of anything #pumpkin or #pumpkinspiced but OMG. These are the best cookies I've... \nTweet 19:\n- tweetId: 2070\n- text: I'm so glad that Jonathan Stewart had to have, his best game in 5 yrs against me in fantasy fb playoffs.....  #imout \nTweet 20:\n- tweetId: 2466\n- text: Let's go CAVS!!! #cleveland #cavs #cavaliers #nba @ Quicken Loans Arena \nTweet 21:\n- tweetId: 109\n- text: On my lunch break so sleepy\ud83d\ude34 \nTweet 22:\n- tweetId: 2299\n- text: I'm so good at sight singing.  \nTweet 23:\n- tweetId: 815\n- text: @user #me and #change were not friends I still need #time \nTweet 24:\n- tweetId: 2662\n- text: Yay for knee machines!  \nTweet 25:\n- tweetId: 2233\n- text: Wondering weather to have a few drinks tonight or not \ud83c\udf85\ud83c\udf81\ud83c\udf81\ud83c\udf84 \nTweet 26:\n- tweetId: 1719\n- text: Yea, yea that's logical.  \nTweet 27:\n- tweetId: 903\n- text: Sorry this doesn't make any sense why make it even more tough? That's going to produce more players..  \nTweet 28:\n- tweetId: 1840\n- text: Too bad her cube doesn't have a door. - @user ||#bestcoworkersever  @user \nTweet 29:\n- tweetId: 2414\n- text: The ultimate \"How to\" book..... \nTweet 30:\n- tweetId: 1140\n- text: @user Substitute For Chicken Nuggets uhm no thanks \nTweet 31:\n- tweetId: 27\n- text: @user @user @user no duh. ? Is will owners fire Goodell for it? My guess he gets a raise  #GoodellMustGo \nTweet 32:\n- tweetId: 654\n- text: #TeenAnalCasting #2003 2003 Ford F-150 XLT Mulberry FL 33860 \nTweet 33:\n- tweetId: 2860\n- text: @user no but i followed you and i saw you posted that so i thot i might add on.....sorry \nTweet 34:\n- tweetId: 1732\n- text: They seemed to have found an alternative use for the bible #Hotel #NewYears  #Religious \nTweet 35:\n- tweetId: 1394\n- text: @user The fact that Whites are prone to universal thinking is actually racial in and of itself.  \nTweet 36:\n- tweetId: 1139\n- text: Can hear the trainees watching a training DVD while I'm on my break. Sounds fun :p  \nTweet 37:\n- tweetId: 637\n- text: @user @user @user You're arguments are obviously very impacted by the fact this family were TSI in appearance. \nTweet 38:\n- tweetId: 882\n- text: Well. If it's not one thing it's another. But hey why not a like new exhaust. #pissed  #GRRRR \nTweet 39:\n- tweetId: 1379\n- text: Why couldn't I just stay sleeping \nTweet 40:\n- tweetId: 419\n- text: @user has passed @user as the world's most valuable #startup! #growth #nyc \nTweet 41:\n- tweetId: 380\n- text: @user If it's a \"Blue Ribbon Panel\", then it will be all good.  \nTweet 42:\n- tweetId: 1557\n- text: @user my favourite day of the year !!!!  \nTweet 43:\n- tweetId: 397\n- text: A \u00a3718 phone bill is a lovely email to wake up to  \nTweet 44:\n- tweetId: 1471\n- text: Some guy chattin shit to me on the bus saying I look like snoop dogg #KMT #again \nTweet 45:\n- tweetId: 1409\n- text: Maaaaan stupid instagram I went from having 300+ followers, to my cat my mom and tom from MySpace -_-..... #smh  #butstill !!! \nTweet 46:\n- tweetId: 2473\n- text: it  just had to snow and cancel our Vball tournament today...\ud83d\udd2b\ud83d\ude21\ud83d\ude21\ud83d\ude21\ud83d\ude21 #ball #is  #life \nTweet 47:\n- tweetId: 1084\n- text: Woke up to find out my vehicle insurance went up $22 a month!! Merry Christmas to me...  \ud83d\ude12 \nTweet 48:\n- tweetId: 178\n- text: @user I think I'm gonna check your music out later. Thanks\u263a \nTweet 49:\n- tweetId: 1882\n- text: @user @user But it's not a time capsule! It' current in time \nTweet 50:\n- tweetId: 2197\n- text: 2AM on Christmas Day, and we're heating up Pizza and Breadsticks. #theboysarebackintown \nTweet 51:\n- tweetId: 512\n- text: I always LOVED that my family was the last one to open presents  \nTweet 52:\n- tweetId: 1551\n- text: #Patriots #report #card: #Grades  #half bad: Tom Brady throws under pressure in the 2nd quarter during Sundays \nTweet 53:\n- tweetId: 323\n- text: In desperate need of training partner(s) with the knowledge and insight of the infamous @user Candidates apply within. \nTweet 54:\n- tweetId: 2262\n- text: Even Soweto TV didn't bother to show these fvcken awards...useless to the bone..go figure \nTweet 55:\n- tweetId: 1201\n- text: The BOLD BAKERY by Sarah-Brockett #bakery  \nTweet 56:\n- tweetId: 2575\n- text: 2 a.m., just went to bed  #Twitter #Sleepy #2am \nTweet 57:\n- tweetId: 2534\n- text: BBC News - New Forest road safety campaign donkey killed by car  \nTweet 58:\n- tweetId: 1482\n- text: Eeeek cinema date with the boo this weekend\ud83d\ude48\ud83d\udc95 \nTweet 59:\n- tweetId: 2365\n- text: Russia says ruble crisis over as reserves dive, inflation climbs  via @user \nTweet 60:\n- tweetId: 788\n- text: @user @user I bet those fairways and greens rival the work of @user  \nTweet 61:\n- tweetId: 285\n- text: I give people a break 2 say that without my supporting cast that none of my works would of made it is tosh. Did nobody get #Extras  \nTweet 62:\n- tweetId: 188\n- text: Currently writing about how I plan to stop procrastinating after leaving the paper untouched all day  \nTweet 63:\n- tweetId: 2709\n- text: @user left out blue bin as per calendar but not lifted. Checked your website and it indicates green bin  happy \nTweet 64:\n- tweetId: 934\n- text: #oldfriends#are#old#anymore \nTweet 65:\n- tweetId: 1186\n- text: @user Happy Christmas to you + yours. May 2015 bring good health, happiness, every success and all you wish yourselves. \nTweet 66:\n- tweetId: 327\n- text: Security Engineers are not Security Guards. :| #Hackers  #security \nTweet 67:\n- tweetId: 954\n- text: People in this school seem to amaze me..  \nTweet 68:\n- tweetId: 414\n- text: Being able to think your self angry is such a nice gift to have...  #ItsACurse \nTweet 69:\n- tweetId: 1858\n- text: Oh how I missed middle school drama :~)  \nTweet 70:\n- tweetId: 2604\n- text: @user 1/5th. Just like in the real world!  \nTweet 71:\n- tweetId: 1495\n- text: people never change and that's that \nTweet 72:\n- tweetId: 667\n- text: Feels so good 2 get off  2 have 2 go straight 2 school though... \nTweet 73:\n- tweetId: 1517\n- text: Love scooping feed bunks before we can feed calves  \nTweet 74:\n- tweetId: 1456\n- text: 650 return flight. Why I love my family. #familyvacation  \nTweet 75:\n- tweetId: 859\n- text: Looking forward to new year :D \nTweet 76:\n- tweetId: 2746\n- text: @user @user @user My,Nephew stopped a lot. His long hair. looks like a drug dealer. Never smoked anything Pills?not an aspirin. \nTweet 77:\n- tweetId: 1094\n- text: #notcies #eu Juncker receives birthday surprise: One million signatures opposing TTIP and CETA \nTweet 78:\n- tweetId: 2800\n- text: @user very clever jack! Changed the word \"big\" to \"no\",go to bed feeling like you've made a difference to society #youareagenius  \nTweet 79:\n- tweetId: 2655\n- text: Thanks for shutting the city down..  \nTweet 80:\n- tweetId: 293\n- text: Off in to town to get a bday prezzy, how rude to have a birthday in Xmas week #BusyBee \nTweet 81:\n- tweetId: 2496\n- text: It's brrrrrrr kinda feel & who would go to the kitchen to make coffee .... \nTweet 82:\n- tweetId: 2601\n- text: Fear & Loathing in Las Ukras: #Politics #Russia #Ukraine  \nTweet 83:\n- tweetId: 701\n- text: Cocktails tonight yep why not!   had one in over a year! ! \nTweet 84:\n- tweetId: 2188\n- text: Gee faculty at nicholls are so helpful  \nTweet 85:\n- tweetId: 1003\n- text: The #hardest thing's  #knowing & #having the #faith to #keep #going \nTweet 86:\n- tweetId: 670\n- text: True  \nTweet 87:\n- tweetId: 1894\n- text: Such quality customer service today by @user for the Xbox One  #thisiscrap #nothelpfulatall \nTweet 88:\n- tweetId: 1555\n- text: @user I.e., strength in numbers, focused movement, appeal to other countries, use pens and paper, change the way we live drastically. \nTweet 89:\n- tweetId: 1106\n- text: Choose your words carefully hurting someone feelings is not the right way to go. \nTweet 90:\n- tweetId: 2622\n- text: Dead supportive family I've got.  \nTweet 91:\n- tweetId: 2819\n- text: @user will tweet you when I've got it back up and running. \nTweet 92:\n- tweetId: 2282\n- text: Good to see Tomas Rosicky playing tdae #ARSvQPR \nTweet 93:\n- tweetId: 900\n- text: @user y'all are doing a great job at keeping people safe  \nTweet 94:\n- tweetId: 2805\n- text: Everone is supporting Fawad alam :D|No fawad no cricket :D :v|#Supportfawad |#Usman \nTweet 95:\n- tweetId: 1329\n- text: @user @user @user @user |Ha ha! Christmas cat looks well impressed  \nTweet 96:\n- tweetId: 230\n- text: @user Warwick Davis is more than twice the man Tony Blair is  \nTweet 97:\n- tweetId: 939\n- text: @user  #PSA Hey Jay, I tuned in when u said \"why all the cocaine talk today....after tweeting coke joke saw it's Escobar's 65th  \nTweet 98:\n- tweetId: 132\n- text: @user Ooooh only the 'economic' destruction of the country. Now that makes a world of a difference.  \nTweet 99:\n- tweetId: 1293\n- text: Lol at the #EatenAlive show. if that's the name of the show gotta do it not quit cause the snake was hurting his arm. #goodtv  #garbage \nTweet 100:\n- tweetId: 1644\n- text: I DON'T WANT TO SEE A REMAKE OF MY FAVORITE MOVIE.... OLDBOY WAS A PERFECT FILM. \n\nFor each tweet above, determine if it uses irony."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"is_irony\":true},{\"tweetId\":\"457\",\"is_irony\":false},{\"tweetId\":\"103\",\"is_irony\":false},{\"tweetId\":\"1127\",\"is_irony\":false},{\"tweetId\":\"1004\",\"is_irony\":false},{\"tweetId\":\"915\",\"is_irony\":false},{\"tweetId\":\"572\",\"is_irony\":false},{\"tweetId\":\"420\",\"is_irony\":false},{\"tweetId\":\"2772\",\"is_irony\":true},{\"tweetId\":\"2234\",\"is_irony\":true},{\"tweetId\":\"357\",\"is_irony\":false},{\"tweetId\":\"2419\",\"is_irony\":false},{\"tweetId\":\"1729\",\"is_irony\":false},{\"tweetId\":\"131\",\"is_irony\":false},{\"tweetId\":\"123\",\"is_irony\":false},{\"tweetId\":\"384\",\"is_irony\":true},{\"tweetId\":\"896\",\"is_irony\":false},{\"tweetId\":\"953\",\"is_irony\":false},{\"tweetId\":\"2070\",\"is_irony\":false},{\"tweetId\":\"2466\",\"is_irony\":false},{\"tweetId\":\"109\",\"is_irony\":false},{\"tweetId\":\"2299\",\"is_irony\":false},{\"tweetId\":\"815\",\"is_irony\":false},{\"tweetId\":\"2662\",\"is_irony\":false},{\"tweetId\":\"2233\",\"is_irony\":false},{\"tweetId\":\"1719\",\"is_irony\":false},{\"tweetId\":\"903\",\"is_irony\":false},{\"tweetId\":\"1840\",\"is_irony\":false},{\"tweetId\":\"2414\",\"is_irony\":false},{\"tweetId\":\"1140\",\"is_irony\":false},{\"tweetId\":\"27\",\"is_irony\":false},{\"tweetId\":\"654\",\"is_irony\":false},{\"tweetId\":\"2860\",\"is_irony\":false},{\"tweetId\":\"1732\",\"is_irony\":true},{\"tweetId\":\"1394\",\"is_irony\":false},{\"tweetId\":\"1139\",\"is_irony\":false},{\"tweetId\":\"637\",\"is_irony\":false},{\"tweetId\":\"882\",\"is_irony\":false},{\"tweetId\":\"1379\",\"is_irony\":false},{\"tweetId\":\"419\",\"is_irony\":false},{\"tweetId\":\"380\",\"is_irony\":false},{\"tweetId\":\"1557\",\"is_irony\":false},{\"tweetId\":\"397\",\"is_irony\":true},{\"tweetId\":\"1471\",\"is_irony\":false},{\"tweetId\":\"1409\",\"is_irony\":false},{\"tweetId\":\"2473\",\"is_irony\":false},{\"tweetId\":\"1084\",\"is_irony\":true},{\"tweetId\":\"178\",\"is_irony\":false},{\"tweetId\":\"1882\",\"is_irony\":false},{\"tweetId\":\"2197\",\"is_irony\":false},{\"tweetId\":\"512\",\"is_irony\":false},{\"tweetId\":\"1551\",\"is_irony\":false},{\"tweetId\":\"323\",\"is_irony\":false},{\"tweetId\":\"2262\",\"is_irony\":false},{\"tweetId\":\"1201\",\"is_irony\":false},{\"tweetId\":\"2575\",\"is_irony\":false},{\"tweetId\":\"2534\",\"is_irony\":false},{\"tweetId\":\"1482\",\"is_irony\":false},{\"tweetId\":\"2365\",\"is_irony\":false},{\"tweetId\":\"788\",\"is_irony\":false},{\"tweetId\":\"285\",\"is_irony\":false},{\"tweetId\":\"188\",\"is_irony\":false},{\"tweetId\":\"2709\",\"is_irony\":false},{\"tweetId\":\"934\",\"is_irony\":false},{\"tweetId\":\"1186\",\"is_irony\":false},{\"tweetId\":\"327\",\"is_irony\":false},{\"tweetId\":\"954\",\"is_irony\":false},{\"tweetId\":\"414\",\"is_irony\":false},{\"tweetId\":\"1858\",\"is_irony\":false},{\"tweetId\":\"2604\",\"is_irony\":false},{\"tweetId\":\"1495\",\"is_irony\":false},{\"tweetId\":\"667\",\"is_irony\":false},{\"tweetId\":\"1517\",\"is_irony\":false},{\"tweetId\":\"1456\",\"is_irony\":false},{\"tweetId\":\"859\",\"is_irony\":false},{\"tweetId\":\"2746\",\"is_irony\":false},{\"tweetId\":\"1094\",\"is_irony\":false},{\"tweetId\":\"2800\",\"is_irony\":false},{\"tweetId\":\"2655\",\"is_irony\":false},{\"tweetId\":\"293\",\"is_irony\":false},{\"tweetId\":\"2496\",\"is_irony\":false},{\"tweetId\":\"2601\",\"is_irony\":false},{\"tweetId\":\"701\",\"is_irony\":false},{\"tweetId\":\"2188\",\"is_irony\":false},{\"tweetId\":\"1003\",\"is_irony\":false},{\"tweetId\":\"670\",\"is_irony\":false},{\"tweetId\":\"1894\",\"is_irony\":false},{\"tweetId\":\"1555\",\"is_irony\":false},{\"tweetId\":\"1106\",\"is_irony\":false},{\"tweetId\":\"2622\",\"is_irony\":false},{\"tweetId\":\"2819\",\"is_irony\":false},{\"tweetId\":\"2282\",\"is_irony\":false},{\"tweetId\":\"900\",\"is_irony\":false},{\"tweetId\":\"2805\",\"is_irony\":false},{\"tweetId\":\"1329\",\"is_irony\":false},{\"tweetId\":\"230\",\"is_irony\":false},{\"tweetId\":\"939\",\"is_irony\":false},{\"tweetId\":\"132\",\"is_irony\":true},{\"tweetId\":\"1293\",\"is_irony\":false},{\"tweetId\":\"1644\",\"is_irony\":false}]}"
+    }
+  }
+  ]
+}

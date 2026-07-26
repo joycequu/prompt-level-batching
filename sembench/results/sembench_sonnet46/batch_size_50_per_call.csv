@@ -1,0 +1,3 @@
+batch_number,num_reviews_in_batch,latency_secs,ttft_secs,input_text_tokens,total_cache_read_tokens,cache_creation_tokens,total_prompt_tokens,reasoning_tokens,output_text_tokens,total_completion_tokens,cache_read_cost,uncached_input_cost,total_cost,total_prompt_cost,total_completion_cost,num_positive
+1,50,7.505076169967651,1.783034086227417,2933,0,0,2933,0,705,705,0.0,0.0,0.019374,0.008799,0.010575,23
+2,50,7.4716479778289795,1.7335431575775146,2914,0,0,2914,0,701,701,0.0,0.0,0.019257,0.008742,0.010515,23

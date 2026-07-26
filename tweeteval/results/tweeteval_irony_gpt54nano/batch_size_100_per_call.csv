@@ -1,0 +1,2 @@
+batch_number,num_tweets_in_batch,latency_secs,ttft_secs,input_text_tokens,total_cache_read_tokens,cache_creation_tokens,total_prompt_tokens,reasoning_tokens,output_text_tokens,total_completion_tokens,cache_read_cost,uncached_input_cost,total_cost,total_prompt_cost,total_completion_cost,num_irony
+1,100,7.661333799362183,0.7623467445373535,3754,0,0,3754,0,1174,1174,0.0,0.0,0.0022183,0.0007508,0.0014675,8

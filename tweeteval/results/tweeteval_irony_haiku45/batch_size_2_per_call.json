@@ -1,0 +1,1690 @@
+[
+  {
+    "batch_number": 1,
+    "latency_secs": 0.8514025211334229,
+    "ttft_secs": 0.7113044261932373,
+    "input_token_details": {
+      "input_text_tokens": 586,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 586
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000586,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000791
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2620\", \"is_irony\": true}, {\"tweetId\": \"457\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2620",
+      "457"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "2620",
+      "457"
+    ]
+  },
+  {
+    "batch_number": 2,
+    "latency_secs": 1.4132277965545654,
+    "ttft_secs": 1.2338316440582275,
+    "input_token_details": {
+      "input_text_tokens": 615,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 615
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000615,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.00082
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"103\", \"is_irony\": false}, {\"tweetId\": \"1127\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "103",
+      "1127"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1127"
+    ]
+  },
+  {
+    "batch_number": 3,
+    "latency_secs": 0.9869847297668457,
+    "ttft_secs": 0.8440244197845459,
+    "input_token_details": {
+      "input_text_tokens": 594,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 594
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000594,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000799
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1004\", \"is_irony\": true}, {\"tweetId\": \"915\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1004",
+      "915"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1004"
+    ]
+  },
+  {
+    "batch_number": 4,
+    "latency_secs": 0.9671797752380371,
+    "ttft_secs": 0.8026881217956543,
+    "input_token_details": {
+      "input_text_tokens": 606,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 606
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000606,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000806
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"572\", \"is_irony\": false}, {\"tweetId\": \"420\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "572",
+      "420"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 5,
+    "latency_secs": 1.1261777877807617,
+    "ttft_secs": 0.9699397087097168,
+    "input_token_details": {
+      "input_text_tokens": 617,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 617
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000617,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000827
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2772\", \"is_irony\": false}, {\"tweetId\": \"2234\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2772",
+      "2234"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2234"
+    ]
+  },
+  {
+    "batch_number": 6,
+    "latency_secs": 1.196073055267334,
+    "ttft_secs": 1.0551791191101074,
+    "input_token_details": {
+      "input_text_tokens": 629,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 629
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000629,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000834
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"357\", \"is_irony\": false}, {\"tweetId\": \"2419\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "357",
+      "2419"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2419"
+    ]
+  },
+  {
+    "batch_number": 7,
+    "latency_secs": 1.094757318496704,
+    "ttft_secs": 0.944007158279419,
+    "input_token_details": {
+      "input_text_tokens": 610,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 610
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00061,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000815
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1729\", \"is_irony\": true}, {\"tweetId\": \"131\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1729",
+      "131"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1729"
+    ]
+  },
+  {
+    "batch_number": 8,
+    "latency_secs": 1.2237677574157715,
+    "ttft_secs": 1.057199239730835,
+    "input_token_details": {
+      "input_text_tokens": 604,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 604
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000604,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000804
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"123\", \"is_irony\": true}, {\"tweetId\": \"384\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "123",
+      "384"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "123",
+      "384"
+    ]
+  },
+  {
+    "batch_number": 9,
+    "latency_secs": 0.9843449592590332,
+    "ttft_secs": 0.807974100112915,
+    "input_token_details": {
+      "input_text_tokens": 604,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 604
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000604,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000804
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"896\", \"is_irony\": false}, {\"tweetId\": \"953\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "896",
+      "953"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "953"
+    ]
+  },
+  {
+    "batch_number": 10,
+    "latency_secs": 1.158597707748413,
+    "ttft_secs": 1.0238699913024902,
+    "input_token_details": {
+      "input_text_tokens": 612,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 612
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000612,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000822
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2070\", \"is_irony\": true}, {\"tweetId\": \"2466\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2070",
+      "2466"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2070"
+    ]
+  },
+  {
+    "batch_number": 11,
+    "latency_secs": 1.2715675830841064,
+    "ttft_secs": 1.1134073734283447,
+    "input_token_details": {
+      "input_text_tokens": 571,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 571
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000571,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000776
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"109\", \"is_irony\": false}, {\"tweetId\": \"2299\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "109",
+      "2299"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2299"
+    ]
+  },
+  {
+    "batch_number": 12,
+    "latency_secs": 1.2598326206207275,
+    "ttft_secs": 1.0979692935943604,
+    "input_token_details": {
+      "input_text_tokens": 575,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 575
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000575,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.00078
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"815\", \"is_irony\": false}, {\"tweetId\": \"2662\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "815",
+      "2662"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2662"
+    ]
+  },
+  {
+    "batch_number": 13,
+    "latency_secs": 1.8665657043457031,
+    "ttft_secs": 1.6757173538208008,
+    "input_token_details": {
+      "input_text_tokens": 588,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 588
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000588,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000798
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2233\", \"is_irony\": false}, {\"tweetId\": \"1719\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2233",
+      "1719"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1719"
+    ]
+  },
+  {
+    "batch_number": 14,
+    "latency_secs": 1.0911474227905273,
+    "ttft_secs": 0.8721845149993896,
+    "input_token_details": {
+      "input_text_tokens": 599,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 599
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000599,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000804
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"903\", \"is_irony\": false}, {\"tweetId\": \"1840\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "903",
+      "1840"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1840"
+    ]
+  },
+  {
+    "batch_number": 15,
+    "latency_secs": 1.2283484935760498,
+    "ttft_secs": 1.0662381649017334,
+    "input_token_details": {
+      "input_text_tokens": 574,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 574
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000574,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000784
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2414\", \"is_irony\": true}, {\"tweetId\": \"1140\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2414",
+      "1140"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2414"
+    ]
+  },
+  {
+    "batch_number": 16,
+    "latency_secs": 1.2068171501159668,
+    "ttft_secs": 1.0574712753295898,
+    "input_token_details": {
+      "input_text_tokens": 614,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 614
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000614,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000814
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"27\", \"is_irony\": true}, {\"tweetId\": \"654\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "27",
+      "654"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "27"
+    ]
+  },
+  {
+    "batch_number": 17,
+    "latency_secs": 1.016247272491455,
+    "ttft_secs": 0.8554751873016357,
+    "input_token_details": {
+      "input_text_tokens": 594,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 594
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000594,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000804
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2860\", \"is_irony\": false}, {\"tweetId\": \"1732\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2860",
+      "1732"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1732"
+    ]
+  },
+  {
+    "batch_number": 18,
+    "latency_secs": 1.2315943241119385,
+    "ttft_secs": 1.0701825618743896,
+    "input_token_details": {
+      "input_text_tokens": 590,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 590
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00059,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.0008
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1394\", \"is_irony\": false}, {\"tweetId\": \"1139\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1394",
+      "1139"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1139"
+    ]
+  },
+  {
+    "batch_number": 19,
+    "latency_secs": 0.9163742065429688,
+    "ttft_secs": 0.7786474227905273,
+    "input_token_details": {
+      "input_text_tokens": 608,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 608
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000608,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000808
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"637\", \"is_irony\": false}, {\"tweetId\": \"882\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "637",
+      "882"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "882"
+    ]
+  },
+  {
+    "batch_number": 20,
+    "latency_secs": 1.1656041145324707,
+    "ttft_secs": 1.0126934051513672,
+    "input_token_details": {
+      "input_text_tokens": 580,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 580
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00058,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000785
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1379\", \"is_irony\": false}, {\"tweetId\": \"419\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1379",
+      "419"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 21,
+    "latency_secs": 0.9082646369934082,
+    "ttft_secs": 0.7542600631713867,
+    "input_token_details": {
+      "input_text_tokens": 580,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 580
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00058,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000785
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"380\", \"is_irony\": true}, {\"tweetId\": \"1557\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "380",
+      "1557"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "380"
+    ]
+  },
+  {
+    "batch_number": 22,
+    "latency_secs": 1.0823965072631836,
+    "ttft_secs": 0.9167883396148682,
+    "input_token_details": {
+      "input_text_tokens": 591,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 591
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000591,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000796
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"397\", \"is_irony\": true}, {\"tweetId\": \"1471\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "397",
+      "1471"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "397"
+    ]
+  },
+  {
+    "batch_number": 23,
+    "latency_secs": 1.4819934368133545,
+    "ttft_secs": 1.2508673667907715,
+    "input_token_details": {
+      "input_text_tokens": 627,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 627
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000627,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000837
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1409\", \"is_irony\": false}, {\"tweetId\": \"2473\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1409",
+      "2473"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 24,
+    "latency_secs": 1.0158238410949707,
+    "ttft_secs": 0.8873605728149414,
+    "input_token_details": {
+      "input_text_tokens": 597,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 597
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000597,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000802
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1084\", \"is_irony\": true}, {\"tweetId\": \"178\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1084",
+      "178"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1084"
+    ]
+  },
+  {
+    "batch_number": 25,
+    "latency_secs": 1.1456115245819092,
+    "ttft_secs": 0.9729087352752686,
+    "input_token_details": {
+      "input_text_tokens": 599,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 599
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000599,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000809
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1882\", \"is_irony\": false}, {\"tweetId\": \"2197\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1882",
+      "2197"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2197"
+    ]
+  },
+  {
+    "batch_number": 26,
+    "latency_secs": 1.1465680599212646,
+    "ttft_secs": 1.0007293224334717,
+    "input_token_details": {
+      "input_text_tokens": 596,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 596
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000596,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000801
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"512\", \"is_irony\": true}, {\"tweetId\": \"1551\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "512",
+      "1551"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "512"
+    ]
+  },
+  {
+    "batch_number": 27,
+    "latency_secs": 1.3993864059448242,
+    "ttft_secs": 1.244288682937622,
+    "input_token_details": {
+      "input_text_tokens": 598,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 598
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000598,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000803
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"323\", \"is_irony\": true}, {\"tweetId\": \"2262\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "323",
+      "2262"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "323"
+    ]
+  },
+  {
+    "batch_number": 28,
+    "latency_secs": 1.7880399227142334,
+    "ttft_secs": 1.5854089260101318,
+    "input_token_details": {
+      "input_text_tokens": 591,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 591
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000591,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000801
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1201\", \"is_irony\": false}, {\"tweetId\": \"2575\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1201",
+      "2575"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 29,
+    "latency_secs": 1.5393366813659668,
+    "ttft_secs": 1.3496243953704834,
+    "input_token_details": {
+      "input_text_tokens": 583,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 583
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000583,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000793
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2534\", \"is_irony\": false}, {\"tweetId\": \"1482\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2534",
+      "1482"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 30,
+    "latency_secs": 1.216318130493164,
+    "ttft_secs": 0.9532697200775146,
+    "input_token_details": {
+      "input_text_tokens": 591,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 591
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000591,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000796
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2365\", \"is_irony\": true}, {\"tweetId\": \"788\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2365",
+      "788"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "2365",
+      "788"
+    ]
+  },
+  {
+    "batch_number": 31,
+    "latency_secs": 0.9541425704956055,
+    "ttft_secs": 0.7826144695281982,
+    "input_token_details": {
+      "input_text_tokens": 603,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 603
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000603,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000803
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"285\", \"is_irony\": true}, {\"tweetId\": \"188\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "285",
+      "188"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "285",
+      "188"
+    ]
+  },
+  {
+    "batch_number": 32,
+    "latency_secs": 1.3414051532745361,
+    "ttft_secs": 1.148362159729004,
+    "input_token_details": {
+      "input_text_tokens": 590,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 590
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00059,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000795
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2709\", \"is_irony\": true}, {\"tweetId\": \"934\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2709",
+      "934"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2709"
+    ]
+  },
+  {
+    "batch_number": 33,
+    "latency_secs": 1.2615811824798584,
+    "ttft_secs": 1.0876832008361816,
+    "input_token_details": {
+      "input_text_tokens": 596,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 596
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000596,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000801
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1186\", \"is_irony\": false}, {\"tweetId\": \"327\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1186",
+      "327"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 34,
+    "latency_secs": 1.1546130180358887,
+    "ttft_secs": 0.9905617237091064,
+    "input_token_details": {
+      "input_text_tokens": 583,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 583
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000583,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000783
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"954\", \"is_irony\": false}, {\"tweetId\": \"414\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "954",
+      "414"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "414"
+    ]
+  },
+  {
+    "batch_number": 35,
+    "latency_secs": 1.1197566986083984,
+    "ttft_secs": 0.9684257507324219,
+    "input_token_details": {
+      "input_text_tokens": 580,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 580
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00058,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.00079
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1858\", \"is_irony\": true}, {\"tweetId\": \"2604\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1858",
+      "2604"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "1858",
+      "2604"
+    ]
+  },
+  {
+    "batch_number": 36,
+    "latency_secs": 1.2261195182800293,
+    "ttft_secs": 1.043590784072876,
+    "input_token_details": {
+      "input_text_tokens": 580,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 580
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00058,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000785
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1495\", \"is_irony\": false}, {\"tweetId\": \"667\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1495",
+      "667"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "667"
+    ]
+  },
+  {
+    "batch_number": 37,
+    "latency_secs": 1.2892520427703857,
+    "ttft_secs": 1.1141881942749023,
+    "input_token_details": {
+      "input_text_tokens": 582,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 582
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000582,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000792
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1517\", \"is_irony\": true}, {\"tweetId\": \"1456\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1517",
+      "1456"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "1517",
+      "1456"
+    ]
+  },
+  {
+    "batch_number": 38,
+    "latency_secs": 0.9747533798217773,
+    "ttft_secs": 0.8097403049468994,
+    "input_token_details": {
+      "input_text_tokens": 593,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 593
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000593,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000798
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"859\", \"is_irony\": false}, {\"tweetId\": \"2746\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "859",
+      "2746"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 39,
+    "latency_secs": 1.1994965076446533,
+    "ttft_secs": 1.0391252040863037,
+    "input_token_details": {
+      "input_text_tokens": 608,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 608
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000608,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000818
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1094\", \"is_irony\": false}, {\"tweetId\": \"2800\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1094",
+      "2800"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2800"
+    ]
+  },
+  {
+    "batch_number": 40,
+    "latency_secs": 1.4639849662780762,
+    "ttft_secs": 1.3082168102264404,
+    "input_token_details": {
+      "input_text_tokens": 588,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 588
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000588,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000793
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2655\", \"is_irony\": true}, {\"tweetId\": \"293\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2655",
+      "293"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "2655",
+      "293"
+    ]
+  },
+  {
+    "batch_number": 41,
+    "latency_secs": 0.8407678604125977,
+    "ttft_secs": 0.6962683200836182,
+    "input_token_details": {
+      "input_text_tokens": 594,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 594
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000594,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000804
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2496\", \"is_irony\": false}, {\"tweetId\": \"2601\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2496",
+      "2601"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 42,
+    "latency_secs": 1.1135616302490234,
+    "ttft_secs": 0.9866502285003662,
+    "input_token_details": {
+      "input_text_tokens": 578,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 578
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000578,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000783
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"701\", \"is_irony\": false}, {\"tweetId\": \"2188\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "701",
+      "2188"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2188"
+    ]
+  },
+  {
+    "batch_number": 43,
+    "latency_secs": 1.1209454536437988,
+    "ttft_secs": 0.9744775295257568,
+    "input_token_details": {
+      "input_text_tokens": 572,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 572
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000572,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000777
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1003\", \"is_irony\": false}, {\"tweetId\": \"670\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1003",
+      "670"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 44,
+    "latency_secs": 0.971670389175415,
+    "ttft_secs": 0.8248565196990967,
+    "input_token_details": {
+      "input_text_tokens": 611,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 611
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000611,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000821
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1894\", \"is_irony\": true}, {\"tweetId\": \"1555\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1894",
+      "1555"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1894"
+    ]
+  },
+  {
+    "batch_number": 45,
+    "latency_secs": 1.2072553634643555,
+    "ttft_secs": 0.9471681118011475,
+    "input_token_details": {
+      "input_text_tokens": 578,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 578
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000578,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000788
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1106\", \"is_irony\": false}, {\"tweetId\": \"2622\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1106",
+      "2622"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "2622"
+    ]
+  },
+  {
+    "batch_number": 46,
+    "latency_secs": 1.0735654830932617,
+    "ttft_secs": 0.8722383975982666,
+    "input_token_details": {
+      "input_text_tokens": 586,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 586
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000586,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000796
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"2819\", \"is_irony\": false}, {\"tweetId\": \"2282\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "2819",
+      "2282"
+    ],
+    "num_irony": 0,
+    "irony_tweet_ids": []
+  },
+  {
+    "batch_number": 47,
+    "latency_secs": 1.1251707077026367,
+    "ttft_secs": 0.9260053634643555,
+    "input_token_details": {
+      "input_text_tokens": 603,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 603
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000603,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000808
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"900\", \"is_irony\": true}, {\"tweetId\": \"2805\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "900",
+      "2805"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "900"
+    ]
+  },
+  {
+    "batch_number": 48,
+    "latency_secs": 0.9707939624786377,
+    "ttft_secs": 0.7789220809936523,
+    "input_token_details": {
+      "input_text_tokens": 580,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 580
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 41,
+      "total_completion_tokens": 41
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.00058,
+      "total_completion_cost": 0.000205,
+      "total_cost": 0.000785
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1329\", \"is_irony\": true}, {\"tweetId\": \"230\", \"is_irony\": false}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1329",
+      "230"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "1329"
+    ]
+  },
+  {
+    "batch_number": 49,
+    "latency_secs": 1.3640251159667969,
+    "ttft_secs": 1.2020230293273926,
+    "input_token_details": {
+      "input_text_tokens": 616,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 616
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 40,
+      "total_completion_tokens": 40
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000616,
+      "total_completion_cost": 0.0002,
+      "total_cost": 0.000816
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"939\", \"is_irony\": false}, {\"tweetId\": \"132\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "939",
+      "132"
+    ],
+    "num_irony": 1,
+    "irony_tweet_ids": [
+      "132"
+    ]
+  },
+  {
+    "batch_number": 50,
+    "latency_secs": 1.2310433387756348,
+    "ttft_secs": 1.0528886318206787,
+    "input_token_details": {
+      "input_text_tokens": 624,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 624
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 42,
+      "total_completion_tokens": 42
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.000624,
+      "total_completion_cost": 0.00021,
+      "total_cost": 0.000834
+    },
+    "thought": "",
+    "response": "{\"results\": [{\"tweetId\": \"1293\", \"is_irony\": true}, {\"tweetId\": \"1644\", \"is_irony\": true}]}",
+    "num_tweets_in_batch": 2,
+    "tweet_ids": [
+      "1293",
+      "1644"
+    ],
+    "num_irony": 2,
+    "irony_tweet_ids": [
+      "1293",
+      "1644"
+    ]
+  }
+]

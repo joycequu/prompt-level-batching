@@ -1,0 +1,548 @@
+{
+  "settings": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "direct_provider": false,
+    "use_vertex": false,
+    "include_thoughts": true,
+    "disable_cache": true,
+    "reasoning_effort": "none",
+    "plain_json": false,
+    "streaming": true,
+    "prompt_order": "operator_first",
+    "doc_format": "bullet",
+    "data_file": "emotion_random_100.csv",
+    "num_tweets": 100,
+    "batch_sizes": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      25,
+      50,
+      100
+    ]
+  },
+  "results": [
+  {
+    "batch_size": 1,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.73,
+      "total_tweets": 100,
+      "correct": 73,
+      "per_class": {
+        "anger": {
+          "correct": 29,
+          "total": 43,
+          "accuracy": 0.6744186046511628
+        },
+        "joy": {
+          "correct": 20,
+          "total": 21,
+          "accuracy": 0.9523809523809523
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 21,
+          "total": 29,
+          "accuracy": 0.7241379310344828
+        }
+      }
+    },
+    "total_latency_secs": 210.5259895324707,
+    "total_llm_calls": 100,
+    "input_token_details": {
+      "input_text_tokens": 65843,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 65843
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 2004,
+      "total_completion_tokens": 2004
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.19752900000000007,
+      "total_completion_cost": 0.030060000000000028,
+      "total_cost": 0.2275890000000001
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:becdaa027484400caa580fa0fa1bd341] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 1 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"}]}"
+    }
+  },
+  {
+    "batch_size": 2,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.75,
+      "total_tweets": 100,
+      "correct": 75,
+      "per_class": {
+        "anger": {
+          "correct": 29,
+          "total": 43,
+          "accuracy": 0.6744186046511628
+        },
+        "joy": {
+          "correct": 19,
+          "total": 21,
+          "accuracy": 0.9047619047619048
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 24,
+          "total": 29,
+          "accuracy": 0.8275862068965517
+        }
+      }
+    },
+    "total_latency_secs": 102.08000087738037,
+    "total_llm_calls": 50,
+    "input_token_details": {
+      "input_text_tokens": 35169,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 35169
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1606,
+      "total_completion_tokens": 1606
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.105507,
+      "total_completion_cost": 0.024090000000000004,
+      "total_cost": 0.12959699999999996
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:69292d552e1e48b6b1d72474caf71ab0] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 2 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"}]}"
+    }
+  },
+  {
+    "batch_size": 5,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.73,
+      "total_tweets": 100,
+      "correct": 73,
+      "per_class": {
+        "anger": {
+          "correct": 28,
+          "total": 43,
+          "accuracy": 0.6511627906976745
+        },
+        "joy": {
+          "correct": 19,
+          "total": 21,
+          "accuracy": 0.9047619047619048
+        },
+        "optimism": {
+          "correct": 4,
+          "total": 7,
+          "accuracy": 0.5714285714285714
+        },
+        "sadness": {
+          "correct": 22,
+          "total": 29,
+          "accuracy": 0.7586206896551724
+        }
+      }
+    },
+    "total_latency_secs": 58.46185374259949,
+    "total_llm_calls": 20,
+    "input_token_details": {
+      "input_text_tokens": 16733,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 16733
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1367,
+      "total_completion_tokens": 1367
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.05019900000000001,
+      "total_completion_cost": 0.020505000000000006,
+      "total_cost": 0.07070399999999998
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:4ff94935e74048cb8ae9a5619e38929e] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 5 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"optimism\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"anger\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"}]}"
+    }
+  },
+  {
+    "batch_size": 10,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.73,
+      "total_tweets": 100,
+      "correct": 73,
+      "per_class": {
+        "anger": {
+          "correct": 32,
+          "total": 43,
+          "accuracy": 0.7441860465116279
+        },
+        "joy": {
+          "correct": 17,
+          "total": 21,
+          "accuracy": 0.8095238095238095
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 21,
+          "total": 29,
+          "accuracy": 0.7241379310344828
+        }
+      }
+    },
+    "total_latency_secs": 38.18466234207153,
+    "total_llm_calls": 10,
+    "input_token_details": {
+      "input_text_tokens": 10608,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 10608
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1284,
+      "total_completion_tokens": 1284
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.031824000000000005,
+      "total_completion_cost": 0.01926,
+      "total_cost": 0.051084000000000004
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:1e387b1582bb4c129f1bd93c7cf703af] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 10 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \nTweet 6:\n- tweetId: 1004\n- text: Is this the Krusty Krab?\\n\\nNo this is crippling depression \nTweet 7:\n- tweetId: 915\n- text: @user the red one would look super pretty with a bronzy glowy nude lip makeup look! 3rd black would be pretty with a dark lip! \ud83d\ude0d \nTweet 8:\n- tweetId: 572\n- text: @user i would just get some decent referees #shocking \nTweet 9:\n- tweetId: 3017\n- text: Yet again another night I should've stayed in\ud83d\ude0a \nTweet 10:\n- tweetId: 420\n- text: @user I personally liked #relentless \u2026didn't get #OurHouse #OneJersey #werealldevilsinside \\nDoes nothing till a puck drops #NJDevils \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"joy\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"},{\"tweetId\":\"1004\",\"emotion\":\"sadness\"},{\"tweetId\":\"915\",\"emotion\":\"joy\"},{\"tweetId\":\"572\",\"emotion\":\"anger\"},{\"tweetId\":\"3017\",\"emotion\":\"sadness\"},{\"tweetId\":\"420\",\"emotion\":\"anger\"}]}"
+    }
+  },
+  {
+    "batch_size": 20,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.73,
+      "total_tweets": 100,
+      "correct": 73,
+      "per_class": {
+        "anger": {
+          "correct": 31,
+          "total": 43,
+          "accuracy": 0.7209302325581395
+        },
+        "joy": {
+          "correct": 18,
+          "total": 21,
+          "accuracy": 0.8571428571428571
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 21,
+          "total": 29,
+          "accuracy": 0.7241379310344828
+        }
+      }
+    },
+    "total_latency_secs": 19.5214684009552,
+    "total_llm_calls": 5,
+    "input_token_details": {
+      "input_text_tokens": 7536,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 7536
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1244,
+      "total_completion_tokens": 1244
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.022608,
+      "total_completion_cost": 0.01866,
+      "total_cost": 0.041268
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:5ce207f51c40489f93284948799d8197] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 20 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \nTweet 6:\n- tweetId: 1004\n- text: Is this the Krusty Krab?\\n\\nNo this is crippling depression \nTweet 7:\n- tweetId: 915\n- text: @user the red one would look super pretty with a bronzy glowy nude lip makeup look! 3rd black would be pretty with a dark lip! \ud83d\ude0d \nTweet 8:\n- tweetId: 572\n- text: @user i would just get some decent referees #shocking \nTweet 9:\n- tweetId: 3017\n- text: Yet again another night I should've stayed in\ud83d\ude0a \nTweet 10:\n- tweetId: 420\n- text: @user I personally liked #relentless \u2026didn't get #OurHouse #OneJersey #werealldevilsinside \\nDoes nothing till a puck drops #NJDevils \nTweet 11:\n- tweetId: 2772\n- text: These people irritate tf out of me I swear \ud83d\ude44 I'm goin to sleep \u270c\ud83c\udffe\ufe0f \nTweet 12:\n- tweetId: 3034\n- text: I'm really hitting all flavors of my sparkling water rap. But you know what's tripping me out? These half French and Spanish flavors. \nTweet 13:\n- tweetId: 2234\n- text: Thanks to all the #sober drivers. The real winners of the night! #ClemvsGT \nTweet 14:\n- tweetId: 357\n- text: I'm girly in the sense that I always have lashes &amp; nails done but tomboy in the sense that black is my only color &amp; refuse the ruffle life \nTweet 15:\n- tweetId: 2419\n- text: #GBBO is such a homely pure piece of tv gold. Channel 4 will attempt to tart it up. Mary, Sue and Mel gone. It's over. I'm out. \ud83d\udc4b  \nTweet 16:\n- tweetId: 1729\n- text: @user @user @user There is some hilarity in someone who is literally openly anti-science calling others anti-science. \nTweet 17:\n- tweetId: 131\n- text: @user @user my god is @user a full shilling? Seriously you need a major rethink or no lab gove in your lifetime #sad \nTweet 18:\n- tweetId: 123\n- text: @user @user don't get me started on town centre. Used to go every week.... not been for 18 months #horrible \nTweet 19:\n- tweetId: 384\n- text: @user omg I'm so slow bc my eng is not very well and my hands are shaking uhh help meee I'm like this lil chicken now \ud83d\udc25#MoreisBetter \nTweet 20:\n- tweetId: 896\n- text: @user @user had more fun than the funniest person in funsville..... Much hilarity as usual.... Thank you \u2764\ufe0f \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"joy\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"},{\"tweetId\":\"1004\",\"emotion\":\"sadness\"},{\"tweetId\":\"915\",\"emotion\":\"joy\"},{\"tweetId\":\"572\",\"emotion\":\"anger\"},{\"tweetId\":\"3017\",\"emotion\":\"sadness\"},{\"tweetId\":\"420\",\"emotion\":\"sadness\"},{\"tweetId\":\"2772\",\"emotion\":\"anger\"},{\"tweetId\":\"3034\",\"emotion\":\"joy\"},{\"tweetId\":\"2234\",\"emotion\":\"joy\"},{\"tweetId\":\"357\",\"emotion\":\"joy\"},{\"tweetId\":\"2419\",\"emotion\":\"sadness\"},{\"tweetId\":\"1729\",\"emotion\":\"joy\"},{\"tweetId\":\"131\",\"emotion\":\"anger\"},{\"tweetId\":\"123\",\"emotion\":\"sadness\"},{\"tweetId\":\"384\",\"emotion\":\"sadness\"},{\"tweetId\":\"896\",\"emotion\":\"joy\"}]}"
+    }
+  },
+  {
+    "batch_size": 25,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.73,
+      "total_tweets": 100,
+      "correct": 73,
+      "per_class": {
+        "anger": {
+          "correct": 33,
+          "total": 43,
+          "accuracy": 0.7674418604651163
+        },
+        "joy": {
+          "correct": 15,
+          "total": 21,
+          "accuracy": 0.7142857142857143
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 22,
+          "total": 29,
+          "accuracy": 0.7586206896551724
+        }
+      }
+    },
+    "total_latency_secs": 23.446395874023438,
+    "total_llm_calls": 4,
+    "input_token_details": {
+      "input_text_tokens": 6932,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 6932
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1239,
+      "total_completion_tokens": 1239
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.020796000000000002,
+      "total_completion_cost": 0.018585,
+      "total_cost": 0.039381
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:89bdeae1bd82490287f8d8e17f424c8f] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 25 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \nTweet 6:\n- tweetId: 1004\n- text: Is this the Krusty Krab?\\n\\nNo this is crippling depression \nTweet 7:\n- tweetId: 915\n- text: @user the red one would look super pretty with a bronzy glowy nude lip makeup look! 3rd black would be pretty with a dark lip! \ud83d\ude0d \nTweet 8:\n- tweetId: 572\n- text: @user i would just get some decent referees #shocking \nTweet 9:\n- tweetId: 3017\n- text: Yet again another night I should've stayed in\ud83d\ude0a \nTweet 10:\n- tweetId: 420\n- text: @user I personally liked #relentless \u2026didn't get #OurHouse #OneJersey #werealldevilsinside \\nDoes nothing till a puck drops #NJDevils \nTweet 11:\n- tweetId: 2772\n- text: These people irritate tf out of me I swear \ud83d\ude44 I'm goin to sleep \u270c\ud83c\udffe\ufe0f \nTweet 12:\n- tweetId: 3034\n- text: I'm really hitting all flavors of my sparkling water rap. But you know what's tripping me out? These half French and Spanish flavors. \nTweet 13:\n- tweetId: 2234\n- text: Thanks to all the #sober drivers. The real winners of the night! #ClemvsGT \nTweet 14:\n- tweetId: 357\n- text: I'm girly in the sense that I always have lashes &amp; nails done but tomboy in the sense that black is my only color &amp; refuse the ruffle life \nTweet 15:\n- tweetId: 2419\n- text: #GBBO is such a homely pure piece of tv gold. Channel 4 will attempt to tart it up. Mary, Sue and Mel gone. It's over. I'm out. \ud83d\udc4b  \nTweet 16:\n- tweetId: 1729\n- text: @user @user @user There is some hilarity in someone who is literally openly anti-science calling others anti-science. \nTweet 17:\n- tweetId: 131\n- text: @user @user my god is @user a full shilling? Seriously you need a major rethink or no lab gove in your lifetime #sad \nTweet 18:\n- tweetId: 123\n- text: @user @user don't get me started on town centre. Used to go every week.... not been for 18 months #horrible \nTweet 19:\n- tweetId: 384\n- text: @user omg I'm so slow bc my eng is not very well and my hands are shaking uhh help meee I'm like this lil chicken now \ud83d\udc25#MoreisBetter \nTweet 20:\n- tweetId: 896\n- text: @user @user had more fun than the funniest person in funsville..... Much hilarity as usual.... Thank you \u2764\ufe0f \nTweet 21:\n- tweetId: 953\n- text: @user cheer up chuck\ud83d\ude18 \nTweet 22:\n- tweetId: 2070\n- text: @user @user \\nI like your thinking...but sadly no - that's the shed \ud83d\ude22 \nTweet 23:\n- tweetId: 2466\n- text: @user I've been disconnected whilst on holiday \ud83d\ude24 but I don't move house until the 1st October \ud83e\udd14 #furious \nTweet 24:\n- tweetId: 109\n- text: @user holy shit...what the hell happened to your lips!! Fix that shit! #mtv #teenmom #horrible \nTweet 25:\n- tweetId: 2299\n- text: @user Are you always so relentlessly positive? Your constantly cheerful optimistic disposition starts to grate after a while. \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"anger\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"},{\"tweetId\":\"1004\",\"emotion\":\"sadness\"},{\"tweetId\":\"915\",\"emotion\":\"joy\"},{\"tweetId\":\"572\",\"emotion\":\"anger\"},{\"tweetId\":\"3017\",\"emotion\":\"sadness\"},{\"tweetId\":\"420\",\"emotion\":\"sadness\"},{\"tweetId\":\"2772\",\"emotion\":\"anger\"},{\"tweetId\":\"3034\",\"emotion\":\"joy\"},{\"tweetId\":\"2234\",\"emotion\":\"joy\"},{\"tweetId\":\"357\",\"emotion\":\"joy\"},{\"tweetId\":\"2419\",\"emotion\":\"sadness\"},{\"tweetId\":\"1729\",\"emotion\":\"anger\"},{\"tweetId\":\"131\",\"emotion\":\"anger\"},{\"tweetId\":\"123\",\"emotion\":\"sadness\"},{\"tweetId\":\"384\",\"emotion\":\"sadness\"},{\"tweetId\":\"896\",\"emotion\":\"joy\"},{\"tweetId\":\"953\",\"emotion\":\"optimism\"},{\"tweetId\":\"2070\",\"emotion\":\"sadness\"},{\"tweetId\":\"2466\",\"emotion\":\"anger\"},{\"tweetId\":\"109\",\"emotion\":\"anger\"},{\"tweetId\":\"2299\",\"emotion\":\"anger\"}]}"
+    }
+  },
+  {
+    "batch_size": 50,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.74,
+      "total_tweets": 100,
+      "correct": 74,
+      "per_class": {
+        "anger": {
+          "correct": 33,
+          "total": 43,
+          "accuracy": 0.7674418604651163
+        },
+        "joy": {
+          "correct": 17,
+          "total": 21,
+          "accuracy": 0.8095238095238095
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 21,
+          "total": 29,
+          "accuracy": 0.7241379310344828
+        }
+      }
+    },
+    "total_latency_secs": 19.687115907669067,
+    "total_llm_calls": 2,
+    "input_token_details": {
+      "input_text_tokens": 5698,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 5698
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1220,
+      "total_completion_tokens": 1220
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.017093999999999998,
+      "total_completion_cost": 0.0183,
+      "total_cost": 0.035393999999999995
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:f57567df10fd4356b4a7bc665b2792c5] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 50 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \nTweet 6:\n- tweetId: 1004\n- text: Is this the Krusty Krab?\\n\\nNo this is crippling depression \nTweet 7:\n- tweetId: 915\n- text: @user the red one would look super pretty with a bronzy glowy nude lip makeup look! 3rd black would be pretty with a dark lip! \ud83d\ude0d \nTweet 8:\n- tweetId: 572\n- text: @user i would just get some decent referees #shocking \nTweet 9:\n- tweetId: 3017\n- text: Yet again another night I should've stayed in\ud83d\ude0a \nTweet 10:\n- tweetId: 420\n- text: @user I personally liked #relentless \u2026didn't get #OurHouse #OneJersey #werealldevilsinside \\nDoes nothing till a puck drops #NJDevils \nTweet 11:\n- tweetId: 2772\n- text: These people irritate tf out of me I swear \ud83d\ude44 I'm goin to sleep \u270c\ud83c\udffe\ufe0f \nTweet 12:\n- tweetId: 3034\n- text: I'm really hitting all flavors of my sparkling water rap. But you know what's tripping me out? These half French and Spanish flavors. \nTweet 13:\n- tweetId: 2234\n- text: Thanks to all the #sober drivers. The real winners of the night! #ClemvsGT \nTweet 14:\n- tweetId: 357\n- text: I'm girly in the sense that I always have lashes &amp; nails done but tomboy in the sense that black is my only color &amp; refuse the ruffle life \nTweet 15:\n- tweetId: 2419\n- text: #GBBO is such a homely pure piece of tv gold. Channel 4 will attempt to tart it up. Mary, Sue and Mel gone. It's over. I'm out. \ud83d\udc4b  \nTweet 16:\n- tweetId: 1729\n- text: @user @user @user There is some hilarity in someone who is literally openly anti-science calling others anti-science. \nTweet 17:\n- tweetId: 131\n- text: @user @user my god is @user a full shilling? Seriously you need a major rethink or no lab gove in your lifetime #sad \nTweet 18:\n- tweetId: 123\n- text: @user @user don't get me started on town centre. Used to go every week.... not been for 18 months #horrible \nTweet 19:\n- tweetId: 384\n- text: @user omg I'm so slow bc my eng is not very well and my hands are shaking uhh help meee I'm like this lil chicken now \ud83d\udc25#MoreisBetter \nTweet 20:\n- tweetId: 896\n- text: @user @user had more fun than the funniest person in funsville..... Much hilarity as usual.... Thank you \u2764\ufe0f \nTweet 21:\n- tweetId: 953\n- text: @user cheer up chuck\ud83d\ude18 \nTweet 22:\n- tweetId: 2070\n- text: @user @user \\nI like your thinking...but sadly no - that's the shed \ud83d\ude22 \nTweet 23:\n- tweetId: 2466\n- text: @user I've been disconnected whilst on holiday \ud83d\ude24 but I don't move house until the 1st October \ud83e\udd14 #furious \nTweet 24:\n- tweetId: 109\n- text: @user holy shit...what the hell happened to your lips!! Fix that shit! #mtv #teenmom #horrible \nTweet 25:\n- tweetId: 2299\n- text: @user Are you always so relentlessly positive? Your constantly cheerful optimistic disposition starts to grate after a while. \nTweet 26:\n- tweetId: 815\n- text: Recording some more #FNAF and had to FaceTime my mum to let her know I was okay after I let out a high pitched scream \ud83d\ude02 #horror #suchagirl \nTweet 27:\n- tweetId: 2933\n- text: @user Lol yeah I read that but I stayed up and didn't nap tillI collect 3 people who I think they've got me \ud83d\ude02\ud83d\ude02!! \nTweet 28:\n- tweetId: 2662\n- text: Another raging storm brought on by my own emotions sorry everyone. enjoy the thunder \nTweet 29:\n- tweetId: 2873\n- text: @user  #CureForInsomnia And the left said WE were all doom &amp; gloom. The Trump Train is so much more fun! \nTweet 30:\n- tweetId: 2233\n- text: in my dream....They were trying to steal my kidney!!! #nightmare #blackmarket #whydidiwatchthat \nTweet 31:\n- tweetId: 1719\n- text: False alarm, she's not coming out today \ud83d\ude1e \nTweet 32:\n- tweetId: 903\n- text: @user can you please not have Canadian players play US players, that lag  is atrocious. #fixthisgame #trash #sfvrefund  \nTweet 33:\n- tweetId: 1840\n- text: If you ain't shaking no ass, don't ask me for my liquor. Rule #1.. \nTweet 34:\n- tweetId: 2414\n- text: @user Step 1: Get rid of @user Step 2: Prioritise football Step 3: profit? #depressing \nTweet 35:\n- tweetId: 1140\n- text: @user fucked my coupon that goal! #raging \nTweet 36:\n- tweetId: 27\n- text: angel delight is my everything \nTweet 37:\n- tweetId: 3109\n- text: You want  bad service use #frontier they have #terrible service. Go to #AT&amp;T anybody is better. I am going to complain to better business \nTweet 38:\n- tweetId: 654\n- text: You complain all the time and then wonder why people never want to see you. You acc rile me up. Stfuuu!!!! \nTweet 39:\n- tweetId: 2860\n- text: Dark, dense, and exhilarating come the finale, #HellOrHighWater is a gripping watch. \nTweet 40:\n- tweetId: 1732\n- text: Lord Jesus, I don\u2019t want to be in prison. I want to be free. Entice my heart with the beauty of Your truth &amp; allow me to rejoice in it. Amen \nTweet 41:\n- tweetId: 1394\n- text: @user so you are astounded that I respect blacks to vote like any other human? u talk so down towards them. What bigotry on display! \nTweet 42:\n- tweetId: 1139\n- text: Sickness bug! #awful \nTweet 43:\n- tweetId: 637\n- text: @user  maybe it'd have been different if I stayed for sixth form? But still, the oppressive architecture, uninteresting people \nTweet 44:\n- tweetId: 882\n- text: @user Doesn't explain the ability to land at Manchester but not Bradford - other than more convenient for Flybe. Many unhappy travelers \nTweet 45:\n- tweetId: 3128\n- text: @user I can't wait to hear what he had to say about the brilliant Dr. Hawking... it should be rich... In the poorest of taste! #bully \nTweet 46:\n- tweetId: 1379\n- text: @user @user I'd rather leave my child with @user #shudder \nTweet 47:\n- tweetId: 419\n- text: Is there a perfume that smells like the smell of smokey incense because i would be all about that \nTweet 48:\n- tweetId: 380\n- text: #ObamaLegacy - weekly #riots and #terror attacks, &gt;400k dead #Syrians, #Jews fleeing #persecution in Europe, #Christian #genocide in ME..... \nTweet 49:\n- tweetId: 1557\n- text: @user @user like going to a so called cardiac arrest that turned out to be a cut finger! #fuming #medchat \nTweet 50:\n- tweetId: 397\n- text: two major banking stocks down almost 15 to 20 % from their highs while benchmarks still close to top it is a sure #worry for markets \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"anger\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"},{\"tweetId\":\"1004\",\"emotion\":\"sadness\"},{\"tweetId\":\"915\",\"emotion\":\"joy\"},{\"tweetId\":\"572\",\"emotion\":\"anger\"},{\"tweetId\":\"3017\",\"emotion\":\"sadness\"},{\"tweetId\":\"420\",\"emotion\":\"sadness\"},{\"tweetId\":\"2772\",\"emotion\":\"anger\"},{\"tweetId\":\"3034\",\"emotion\":\"joy\"},{\"tweetId\":\"2234\",\"emotion\":\"joy\"},{\"tweetId\":\"357\",\"emotion\":\"joy\"},{\"tweetId\":\"2419\",\"emotion\":\"sadness\"},{\"tweetId\":\"1729\",\"emotion\":\"joy\"},{\"tweetId\":\"131\",\"emotion\":\"anger\"},{\"tweetId\":\"123\",\"emotion\":\"sadness\"},{\"tweetId\":\"384\",\"emotion\":\"sadness\"},{\"tweetId\":\"896\",\"emotion\":\"joy\"},{\"tweetId\":\"953\",\"emotion\":\"optimism\"},{\"tweetId\":\"2070\",\"emotion\":\"sadness\"},{\"tweetId\":\"2466\",\"emotion\":\"anger\"},{\"tweetId\":\"109\",\"emotion\":\"anger\"},{\"tweetId\":\"2299\",\"emotion\":\"anger\"},{\"tweetId\":\"815\",\"emotion\":\"joy\"},{\"tweetId\":\"2933\",\"emotion\":\"joy\"},{\"tweetId\":\"2662\",\"emotion\":\"sadness\"},{\"tweetId\":\"2873\",\"emotion\":\"joy\"},{\"tweetId\":\"2233\",\"emotion\":\"sadness\"},{\"tweetId\":\"1719\",\"emotion\":\"sadness\"},{\"tweetId\":\"903\",\"emotion\":\"anger\"},{\"tweetId\":\"1840\",\"emotion\":\"anger\"},{\"tweetId\":\"2414\",\"emotion\":\"sadness\"},{\"tweetId\":\"1140\",\"emotion\":\"anger\"},{\"tweetId\":\"27\",\"emotion\":\"joy\"},{\"tweetId\":\"3109\",\"emotion\":\"anger\"},{\"tweetId\":\"654\",\"emotion\":\"anger\"},{\"tweetId\":\"2860\",\"emotion\":\"joy\"},{\"tweetId\":\"1732\",\"emotion\":\"optimism\"},{\"tweetId\":\"1394\",\"emotion\":\"anger\"},{\"tweetId\":\"1139\",\"emotion\":\"sadness\"},{\"tweetId\":\"637\",\"emotion\":\"sadness\"},{\"tweetId\":\"882\",\"emotion\":\"anger\"},{\"tweetId\":\"3128\",\"emotion\":\"anger\"},{\"tweetId\":\"1379\",\"emotion\":\"anger\"},{\"tweetId\":\"419\",\"emotion\":\"optimism\"},{\"tweetId\":\"380\",\"emotion\":\"anger\"},{\"tweetId\":\"1557\",\"emotion\":\"anger\"},{\"tweetId\":\"397\",\"emotion\":\"sadness\"}]}"
+    }
+  },
+  {
+    "batch_size": 100,
+    "model_name": "anthropic/claude-sonnet-4.6",
+    "total_tweets_processed": 100,
+    "accuracy_metrics": {
+      "accuracy": 0.76,
+      "total_tweets": 100,
+      "correct": 76,
+      "per_class": {
+        "anger": {
+          "correct": 32,
+          "total": 43,
+          "accuracy": 0.7441860465116279
+        },
+        "joy": {
+          "correct": 18,
+          "total": 21,
+          "accuracy": 0.8571428571428571
+        },
+        "optimism": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        },
+        "sadness": {
+          "correct": 23,
+          "total": 29,
+          "accuracy": 0.7931034482758621
+        }
+      }
+    },
+    "total_latency_secs": 15.167890787124634,
+    "total_llm_calls": 1,
+    "input_token_details": {
+      "input_text_tokens": 5082,
+      "total_cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_prompt_tokens": 5082
+    },
+    "output_token_details": {
+      "reasoning_tokens": 0,
+      "output_text_tokens": 1215,
+      "total_completion_tokens": 1215
+    },
+    "cost": {
+      "cache_read_cost": 0.0,
+      "uncached_input_cost": 0.0,
+      "total_prompt_cost": 0.015246,
+      "total_completion_cost": 0.018225,
+      "total_cost": 0.033471
+    },
+    "example": {
+      "request": [
+        {
+          "role": "system",
+          "content": "[nonce:afb28471dac74fdb92ac051a98800aff] You are a helpful assistant whose job is to classify the emotion expressed in tweets.\nYou will be presented with multiple tweets and need to classify each one into exactly one of the following four emotions: anger, joy, optimism, sadness.\n\nTweets are provided in bullet-point format. Each tweet block starts with 'Tweet N:' and lists tweetId and text as bullet fields.\n\nDefinitions:\n- anger: the tweet expresses frustration, rage, or hostility\n- joy: the tweet expresses happiness, excitement, or delight\n- optimism: the tweet expresses hope, confidence, or positive expectation\n- sadness: the tweet expresses sorrow, disappointment, or melancholy\n\nReturn your response as a JSON object with the following structure:\n{\"results\": [{\"tweetId\": \"<id>\", \"emotion\": \"anger|joy|optimism|sadness\"}, ...]}"
+        },
+        {
+          "role": "user",
+          "content": "Classify the emotion of the following 100 tweet(s):\n\nTweet 1:\n- tweetId: 2620\n- text: Everything you\u2019ve ever wanted is on the other side of fear. \u2013George Addair #ThursdayThoughts #yourpushfactor #fear #life #quote \nTweet 2:\n- tweetId: 457\n- text: @user @user Very rare an officer just shoots without regard. They don't want that on their conscience. #incite  \nTweet 3:\n- tweetId: 103\n- text: CommunitySleepCoach: Look at these #narcoleptic #puppies. Make you #smile. If you are human &amp; find yourself in such odd positions, seek #th\u2026 \nTweet 4:\n- tweetId: 3038\n- text: Bloody hell Pam, calm yourself down. But could have sworn something black &amp; hairy just ran across the carpet, #perilsoflivingalone  \nTweet 5:\n- tweetId: 1127\n- text: @user That's awesome!  p.s. ok, what are the odds of that, swapping neighborhoods?  \nTweet 6:\n- tweetId: 1004\n- text: Is this the Krusty Krab?\\n\\nNo this is crippling depression \nTweet 7:\n- tweetId: 915\n- text: @user the red one would look super pretty with a bronzy glowy nude lip makeup look! 3rd black would be pretty with a dark lip! \ud83d\ude0d \nTweet 8:\n- tweetId: 572\n- text: @user i would just get some decent referees #shocking \nTweet 9:\n- tweetId: 3017\n- text: Yet again another night I should've stayed in\ud83d\ude0a \nTweet 10:\n- tweetId: 420\n- text: @user I personally liked #relentless \u2026didn't get #OurHouse #OneJersey #werealldevilsinside \\nDoes nothing till a puck drops #NJDevils \nTweet 11:\n- tweetId: 2772\n- text: These people irritate tf out of me I swear \ud83d\ude44 I'm goin to sleep \u270c\ud83c\udffe\ufe0f \nTweet 12:\n- tweetId: 3034\n- text: I'm really hitting all flavors of my sparkling water rap. But you know what's tripping me out? These half French and Spanish flavors. \nTweet 13:\n- tweetId: 2234\n- text: Thanks to all the #sober drivers. The real winners of the night! #ClemvsGT \nTweet 14:\n- tweetId: 357\n- text: I'm girly in the sense that I always have lashes &amp; nails done but tomboy in the sense that black is my only color &amp; refuse the ruffle life \nTweet 15:\n- tweetId: 2419\n- text: #GBBO is such a homely pure piece of tv gold. Channel 4 will attempt to tart it up. Mary, Sue and Mel gone. It's over. I'm out. \ud83d\udc4b  \nTweet 16:\n- tweetId: 1729\n- text: @user @user @user There is some hilarity in someone who is literally openly anti-science calling others anti-science. \nTweet 17:\n- tweetId: 131\n- text: @user @user my god is @user a full shilling? Seriously you need a major rethink or no lab gove in your lifetime #sad \nTweet 18:\n- tweetId: 123\n- text: @user @user don't get me started on town centre. Used to go every week.... not been for 18 months #horrible \nTweet 19:\n- tweetId: 384\n- text: @user omg I'm so slow bc my eng is not very well and my hands are shaking uhh help meee I'm like this lil chicken now \ud83d\udc25#MoreisBetter \nTweet 20:\n- tweetId: 896\n- text: @user @user had more fun than the funniest person in funsville..... Much hilarity as usual.... Thank you \u2764\ufe0f \nTweet 21:\n- tweetId: 953\n- text: @user cheer up chuck\ud83d\ude18 \nTweet 22:\n- tweetId: 2070\n- text: @user @user \\nI like your thinking...but sadly no - that's the shed \ud83d\ude22 \nTweet 23:\n- tweetId: 2466\n- text: @user I've been disconnected whilst on holiday \ud83d\ude24 but I don't move house until the 1st October \ud83e\udd14 #furious \nTweet 24:\n- tweetId: 109\n- text: @user holy shit...what the hell happened to your lips!! Fix that shit! #mtv #teenmom #horrible \nTweet 25:\n- tweetId: 2299\n- text: @user Are you always so relentlessly positive? Your constantly cheerful optimistic disposition starts to grate after a while. \nTweet 26:\n- tweetId: 815\n- text: Recording some more #FNAF and had to FaceTime my mum to let her know I was okay after I let out a high pitched scream \ud83d\ude02 #horror #suchagirl \nTweet 27:\n- tweetId: 2933\n- text: @user Lol yeah I read that but I stayed up and didn't nap tillI collect 3 people who I think they've got me \ud83d\ude02\ud83d\ude02!! \nTweet 28:\n- tweetId: 2662\n- text: Another raging storm brought on by my own emotions sorry everyone. enjoy the thunder \nTweet 29:\n- tweetId: 2873\n- text: @user  #CureForInsomnia And the left said WE were all doom &amp; gloom. The Trump Train is so much more fun! \nTweet 30:\n- tweetId: 2233\n- text: in my dream....They were trying to steal my kidney!!! #nightmare #blackmarket #whydidiwatchthat \nTweet 31:\n- tweetId: 1719\n- text: False alarm, she's not coming out today \ud83d\ude1e \nTweet 32:\n- tweetId: 903\n- text: @user can you please not have Canadian players play US players, that lag  is atrocious. #fixthisgame #trash #sfvrefund  \nTweet 33:\n- tweetId: 1840\n- text: If you ain't shaking no ass, don't ask me for my liquor. Rule #1.. \nTweet 34:\n- tweetId: 2414\n- text: @user Step 1: Get rid of @user Step 2: Prioritise football Step 3: profit? #depressing \nTweet 35:\n- tweetId: 1140\n- text: @user fucked my coupon that goal! #raging \nTweet 36:\n- tweetId: 27\n- text: angel delight is my everything \nTweet 37:\n- tweetId: 3109\n- text: You want  bad service use #frontier they have #terrible service. Go to #AT&amp;T anybody is better. I am going to complain to better business \nTweet 38:\n- tweetId: 654\n- text: You complain all the time and then wonder why people never want to see you. You acc rile me up. Stfuuu!!!! \nTweet 39:\n- tweetId: 2860\n- text: Dark, dense, and exhilarating come the finale, #HellOrHighWater is a gripping watch. \nTweet 40:\n- tweetId: 1732\n- text: Lord Jesus, I don\u2019t want to be in prison. I want to be free. Entice my heart with the beauty of Your truth &amp; allow me to rejoice in it. Amen \nTweet 41:\n- tweetId: 1394\n- text: @user so you are astounded that I respect blacks to vote like any other human? u talk so down towards them. What bigotry on display! \nTweet 42:\n- tweetId: 1139\n- text: Sickness bug! #awful \nTweet 43:\n- tweetId: 637\n- text: @user  maybe it'd have been different if I stayed for sixth form? But still, the oppressive architecture, uninteresting people \nTweet 44:\n- tweetId: 882\n- text: @user Doesn't explain the ability to land at Manchester but not Bradford - other than more convenient for Flybe. Many unhappy travelers \nTweet 45:\n- tweetId: 3128\n- text: @user I can't wait to hear what he had to say about the brilliant Dr. Hawking... it should be rich... In the poorest of taste! #bully \nTweet 46:\n- tweetId: 1379\n- text: @user @user I'd rather leave my child with @user #shudder \nTweet 47:\n- tweetId: 419\n- text: Is there a perfume that smells like the smell of smokey incense because i would be all about that \nTweet 48:\n- tweetId: 380\n- text: #ObamaLegacy - weekly #riots and #terror attacks, &gt;400k dead #Syrians, #Jews fleeing #persecution in Europe, #Christian #genocide in ME..... \nTweet 49:\n- tweetId: 1557\n- text: @user @user like going to a so called cardiac arrest that turned out to be a cut finger! #fuming #medchat \nTweet 50:\n- tweetId: 397\n- text: two major banking stocks down almost 15 to 20 % from their highs while benchmarks still close to top it is a sure #worry for markets \nTweet 51:\n- tweetId: 1471\n- text: Beginning the process to see if working is an option. #mentalhealth #complexptsd #nervous \nTweet 52:\n- tweetId: 1409\n- text: Bring on my interview at hospital tho \ud83d\ude48\ud83d\ude48 #nervous \nTweet 53:\n- tweetId: 2473\n- text: ok yes I get it as much as the next guy -- bikes blues &amp; bbq is frustrating &amp; loud!!! but these ppl are traveling from all over to come -- \nTweet 54:\n- tweetId: 1084\n- text: Damn our offense is a mix bag of unpredictable lethal weapons I'm worried for Defense Coordinators \ud83d\ude01 #Chargers #Boltup #Recharged \nTweet 55:\n- tweetId: 178\n- text: No one wants to win the wild card because you have to play the Cubs on the road.  #sadness \nTweet 56:\n- tweetId: 2989\n- text: @user @user yes it's shocking how islamophobic Indias are considering how many Muslims live there \nTweet 57:\n- tweetId: 1882\n- text: @user fury road!! \nTweet 58:\n- tweetId: 2197\n- text: @user Aye. There's a brief window in both morning and afternoon otherwise just horrific until late evening. \nTweet 59:\n- tweetId: 512\n- text: \u201cWhat worries you masters you.\u201d - Haddon Robinson @user #Jesusisthesubject   #anxious \nTweet 60:\n- tweetId: 1551\n- text: @user @user @user @user so you were owned by losers on Twitter  \nTweet 61:\n- tweetId: 323\n- text: @user @user @user yes exactly &amp; he's sold out this country to #terror while #lying to cover it up \nTweet 62:\n- tweetId: 2262\n- text: Biggest joke in life? Kardashian and Jenner stans. Their lives are so dull, parents must be so proud. \nTweet 63:\n- tweetId: 1201\n- text: @user dude we same fukc i lost my spectacles this morning....... \nTweet 64:\n- tweetId: 2575\n- text: How do you help someone with #depression who doesn't believe they have it and doesn't trust therapists? \nTweet 65:\n- tweetId: 2534\n- text: @user I love parody accounts! Well done. Vote for #Trump. #lol  \nTweet 66:\n- tweetId: 1482\n- text: I love when people say they aren't racist right before they say some racist shit... Not how that works...  \nTweet 67:\n- tweetId: 2365\n- text: I just don't understand why everyone is so #angry we all just want to live and thrive don't we? \nTweet 68:\n- tweetId: 788\n- text: We express our deep concern about the suspension of   @user  please reactivate it. he never violated T.roles @user \nTweet 69:\n- tweetId: 2886\n- text: People that smoke cigarettes irritate my soul. \nTweet 70:\n- tweetId: 285\n- text: A pessimist sees the difficulty in every opportunity, an optimist sees the opportunity in every difficulty' -Sir Winston Churchill- \nTweet 71:\n- tweetId: 188\n- text: @user I think you should do. Get the fashion police involved. #shocking \nTweet 72:\n- tweetId: 2709\n- text: #Sports Top seed Johnson chases double delight at Tour Championship \nTweet 73:\n- tweetId: 934\n- text: Watched tna for the first time in a long time what the hell happened to the #hardyboys #impactonpop #wwe #terrible \nTweet 74:\n- tweetId: 3167\n- text: @user listen yh don't provoke me cos I'll make you cry \nTweet 75:\n- tweetId: 1186\n- text: And I cried in front of my guy last night. And it's just been a horrible week but it's only for a week \nTweet 76:\n- tweetId: 327\n- text: David Gilmour's biggest compliment? B.B. King asked him after a gig if he was born in Mississippi #pinkfloyd #theblues #davidgilmour #blues \nTweet 77:\n- tweetId: 954\n- text: Shoutout to the drunk man on the bus who pissed in a bottle and on the seats  \nTweet 78:\n- tweetId: 414\n- text: @user today which can impact the signal, I'm afraid :-( Our engineers are working to have this resolved by this evening and you'll \nTweet 79:\n- tweetId: 1858\n- text: It's interesting the photo of Mono Lisa is crying as well as the whole scene is very depressing #ELE6200 \nTweet 80:\n- tweetId: 2604\n- text: @user actually maybe we were supposed to die and my donation saved our lives??  \nTweet 81:\n- tweetId: 1495\n- text: How had Matty Dawson not scored there!!!!! #terrible \nTweet 82:\n- tweetId: 667\n- text: Quinn's short hair makes me sad.  \nTweet 83:\n- tweetId: 1517\n- text: It feels like there are no houses out there for us. With the most basic requirements I have, there are literally no options.  \nTweet 84:\n- tweetId: 1456\n- text: Hell hath no fury like a sound technician scorned'\\n\\nThat's the quote right \nTweet 85:\n- tweetId: 859\n- text: Why does @user have to come to Glasgow on a night I am working. I am fucking gutted, been waiting for an appearance for ages  \nTweet 86:\n- tweetId: 2746\n- text: @user I think that yawning actor died of a drug overdose.  \nTweet 87:\n- tweetId: 1094\n- text: @user Hope they refuse :( x #depressing \nTweet 88:\n- tweetId: 2875\n- text: Some questions you get on Twitter make you want to despair. We've been so battered. We complain but aren't convinced things could be better. \nTweet 89:\n- tweetId: 2800\n- text: @user literally Nicole already had her chance and she played shitty both seasons. #bitter \nTweet 90:\n- tweetId: 2655\n- text: @user you have had from me over the years is irrelevant. Its an absolute joke. #manutd #ticketing  #noloyalty #joke #notimpressed \nTweet 91:\n- tweetId: 293\n- text: @user @user @user Kirby's Black Panther in a cool animated panel. \nTweet 92:\n- tweetId: 2496\n- text: @user (1) Watch out for memes &amp; statements designed to make you feel outrage, but that don't give you anything to *do* about situation \nTweet 93:\n- tweetId: 2601\n- text: @user are you gonna do any kind of community raids when wrath of the machine drops? \nTweet 94:\n- tweetId: 701\n- text: I forgot #BB18 was on tonight \uf633 that is how much the real world has been distracting me #horrid \uf645\uf3fc\uf648\uf64a \nTweet 95:\n- tweetId: 2188\n- text: Panic attacks are the worst. Feeling really sick and still shaking. I should be a sleep. #anxiety #depression \nTweet 96:\n- tweetId: 2987\n- text: Women don't like girls because we resent them for looking so great/we wish we still looked like that  #washed \nTweet 97:\n- tweetId: 1003\n- text: Well, this is cheery. #MrRobot \nTweet 98:\n- tweetId: 670\n- text: I Don't know what make #Pakistan fear more their #terrorist or their #terrorism  #TerrorStatePak \nTweet 99:\n- tweetId: 1894\n- text: Wish I was a kid again. The only stressful part was whether Gabriella and Troy would get back together or not. #hsm2  \nTweet 100:\n- tweetId: 1555\n- text: So going to local news immediately after #DesignatedSurvivor turns out to be a smooth transition. 'Chaos! A raging fire!...' #media  \n\nFor each tweet above, identify the primary emotion expressed."
+        }
+      ],
+      "response": "{\"results\":[{\"tweetId\":\"2620\",\"emotion\":\"optimism\"},{\"tweetId\":\"457\",\"emotion\":\"anger\"},{\"tweetId\":\"103\",\"emotion\":\"joy\"},{\"tweetId\":\"3038\",\"emotion\":\"anger\"},{\"tweetId\":\"1127\",\"emotion\":\"joy\"},{\"tweetId\":\"1004\",\"emotion\":\"sadness\"},{\"tweetId\":\"915\",\"emotion\":\"joy\"},{\"tweetId\":\"572\",\"emotion\":\"anger\"},{\"tweetId\":\"3017\",\"emotion\":\"sadness\"},{\"tweetId\":\"420\",\"emotion\":\"sadness\"},{\"tweetId\":\"2772\",\"emotion\":\"anger\"},{\"tweetId\":\"3034\",\"emotion\":\"joy\"},{\"tweetId\":\"2234\",\"emotion\":\"joy\"},{\"tweetId\":\"357\",\"emotion\":\"joy\"},{\"tweetId\":\"2419\",\"emotion\":\"sadness\"},{\"tweetId\":\"1729\",\"emotion\":\"joy\"},{\"tweetId\":\"131\",\"emotion\":\"anger\"},{\"tweetId\":\"123\",\"emotion\":\"sadness\"},{\"tweetId\":\"384\",\"emotion\":\"sadness\"},{\"tweetId\":\"896\",\"emotion\":\"joy\"},{\"tweetId\":\"953\",\"emotion\":\"optimism\"},{\"tweetId\":\"2070\",\"emotion\":\"sadness\"},{\"tweetId\":\"2466\",\"emotion\":\"anger\"},{\"tweetId\":\"109\",\"emotion\":\"anger\"},{\"tweetId\":\"2299\",\"emotion\":\"anger\"},{\"tweetId\":\"815\",\"emotion\":\"joy\"},{\"tweetId\":\"2933\",\"emotion\":\"joy\"},{\"tweetId\":\"2662\",\"emotion\":\"sadness\"},{\"tweetId\":\"2873\",\"emotion\":\"joy\"},{\"tweetId\":\"2233\",\"emotion\":\"sadness\"},{\"tweetId\":\"1719\",\"emotion\":\"sadness\"},{\"tweetId\":\"903\",\"emotion\":\"anger\"},{\"tweetId\":\"1840\",\"emotion\":\"anger\"},{\"tweetId\":\"2414\",\"emotion\":\"sadness\"},{\"tweetId\":\"1140\",\"emotion\":\"anger\"},{\"tweetId\":\"27\",\"emotion\":\"joy\"},{\"tweetId\":\"3109\",\"emotion\":\"anger\"},{\"tweetId\":\"654\",\"emotion\":\"anger\"},{\"tweetId\":\"2860\",\"emotion\":\"joy\"},{\"tweetId\":\"1732\",\"emotion\":\"optimism\"},{\"tweetId\":\"1394\",\"emotion\":\"anger\"},{\"tweetId\":\"1139\",\"emotion\":\"sadness\"},{\"tweetId\":\"637\",\"emotion\":\"sadness\"},{\"tweetId\":\"882\",\"emotion\":\"anger\"},{\"tweetId\":\"3128\",\"emotion\":\"anger\"},{\"tweetId\":\"1379\",\"emotion\":\"anger\"},{\"tweetId\":\"419\",\"emotion\":\"optimism\"},{\"tweetId\":\"380\",\"emotion\":\"anger\"},{\"tweetId\":\"1557\",\"emotion\":\"anger\"},{\"tweetId\":\"397\",\"emotion\":\"sadness\"},{\"tweetId\":\"1471\",\"emotion\":\"optimism\"},{\"tweetId\":\"1409\",\"emotion\":\"optimism\"},{\"tweetId\":\"2473\",\"emotion\":\"anger\"},{\"tweetId\":\"1084\",\"emotion\":\"joy\"},{\"tweetId\":\"178\",\"emotion\":\"sadness\"},{\"tweetId\":\"2989\",\"emotion\":\"anger\"},{\"tweetId\":\"1882\",\"emotion\":\"joy\"},{\"tweetId\":\"2197\",\"emotion\":\"sadness\"},{\"tweetId\":\"512\",\"emotion\":\"sadness\"},{\"tweetId\":\"1551\",\"emotion\":\"anger\"},{\"tweetId\":\"323\",\"emotion\":\"anger\"},{\"tweetId\":\"2262\",\"emotion\":\"anger\"},{\"tweetId\":\"1201\",\"emotion\":\"sadness\"},{\"tweetId\":\"2575\",\"emotion\":\"sadness\"},{\"tweetId\":\"2534\",\"emotion\":\"joy\"},{\"tweetId\":\"1482\",\"emotion\":\"anger\"},{\"tweetId\":\"2365\",\"emotion\":\"optimism\"},{\"tweetId\":\"788\",\"emotion\":\"sadness\"},{\"tweetId\":\"2886\",\"emotion\":\"anger\"},{\"tweetId\":\"285\",\"emotion\":\"optimism\"},{\"tweetId\":\"188\",\"emotion\":\"anger\"},{\"tweetId\":\"2709\",\"emotion\":\"joy\"},{\"tweetId\":\"934\",\"emotion\":\"anger\"},{\"tweetId\":\"3167\",\"emotion\":\"anger\"},{\"tweetId\":\"1186\",\"emotion\":\"sadness\"},{\"tweetId\":\"327\",\"emotion\":\"joy\"},{\"tweetId\":\"954\",\"emotion\":\"anger\"},{\"tweetId\":\"414\",\"emotion\":\"sadness\"},{\"tweetId\":\"1858\",\"emotion\":\"sadness\"},{\"tweetId\":\"2604\",\"emotion\":\"optimism\"},{\"tweetId\":\"1495\",\"emotion\":\"anger\"},{\"tweetId\":\"667\",\"emotion\":\"sadness\"},{\"tweetId\":\"1517\",\"emotion\":\"sadness\"},{\"tweetId\":\"1456\",\"emotion\":\"anger\"},{\"tweetId\":\"859\",\"emotion\":\"sadness\"},{\"tweetId\":\"2746\",\"emotion\":\"sadness\"},{\"tweetId\":\"1094\",\"emotion\":\"sadness\"},{\"tweetId\":\"2875\",\"emotion\":\"sadness\"},{\"tweetId\":\"2800\",\"emotion\":\"anger\"},{\"tweetId\":\"2655\",\"emotion\":\"anger\"},{\"tweetId\":\"293\",\"emotion\":\"joy\"},{\"tweetId\":\"2496\",\"emotion\":\"anger\"},{\"tweetId\":\"2601\",\"emotion\":\"optimism\"},{\"tweetId\":\"701\",\"emotion\":\"sadness\"},{\"tweetId\":\"2188\",\"emotion\":\"sadness\"},{\"tweetId\":\"2987\",\"emotion\":\"sadness\"},{\"tweetId\":\"1003\",\"emotion\":\"joy\"},{\"tweetId\":\"670\",\"emotion\":\"anger\"},{\"tweetId\":\"1894\",\"emotion\":\"sadness\"},{\"tweetId\":\"1555\",\"emotion\":\"anger\"}]}"
+    }
+  }
+  ]
+}

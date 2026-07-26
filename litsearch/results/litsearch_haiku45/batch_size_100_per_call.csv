@@ -1,0 +1,2 @@
+batch_number,num_papers_in_batch,latency_secs,ttft_secs,input_text_tokens,total_cache_read_tokens,cache_creation_tokens,total_prompt_tokens,reasoning_tokens,output_text_tokens,total_completion_tokens,cache_read_cost,uncached_input_cost,total_cost,total_prompt_cost,total_completion_cost,num_relevant
+1,100,10.814867496490479,2.029271364212036,22809,0,0,22809,0,1604,1604,0.0,0.0,0.030829,0.022809,0.00802,3
